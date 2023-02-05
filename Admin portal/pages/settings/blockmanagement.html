@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Block Merchants</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../../vendors/feather/feather.css">
+    <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../../vendors/font-awesome/css/all.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="../../vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="../../js/select.dataTables.min.css">
+    <link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="../../images/logo-4.png" />
+  </head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="/index.html"><img src="/images/logo-4.png" class="mr-2"
+            alt="logo" /></a>
+
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
+              data-toggle="dropdown">
+              <i class="icon-globe"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+              aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Choose Prefered Language</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-dark">
+                    <i class="ti-world mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Arabic</h6>
+
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="ti-world mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">English</h6>
+
+                </div>
+              </a>
+
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="/images/faces/face28.jpg" alt="profile" />
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="/pages/profile.html">
+                <i class="ti-settings text-primary"></i>
+                Profile Settings
+              </a>
+              <a class="dropdown-item" href="/pages/forgotpassword.html">
+                <i class="ti-marker text-primary"></i>
+                Change Password
+              </a>
+              <a class="dropdown-item" href="/pages/newadmin.html">
+                <i class="ti-plus text-primary"></i>
+                Add new admin
+              </a>
+              <a class="dropdown-item" href="/pages/login.html">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
+
+            </div>
+          </li>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+            data-toggle="offcanvas">
+            <span class="icon-menu"></span>
+          </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">
+              <i class="fa-solid fa-dashboard menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/merchant/merchants.html" aria-expanded="false" aria-controls="ui-basic">
+              <i class="fa fa-user-circle menu-icon"></i>
+              <span class="menu-title"> Merchants</span>
+
+            </a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#transaction" aria-expanded="false" aria-controls="transaction">
+              <i class="fa-solid fa-circle-dollar-to-slot menu-icon"></i>
+              <span class="menu-title">Transactions</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/transaction.html">All Transactions</a></li>
+              </ul>
+            </div>
+
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/summary.html">Summary</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/incomplete.html">Incomplete</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/vm.html">Visa Master</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/completevm.html">Complete VM</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/incompletevm.html">Incomplete VM</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/wallet.html">Payle Wallet</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="/pages/transactions/amex.html">Amex Transactions</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#withdraw" aria-expanded="false" aria-controls="withdraw">
+              <i class="fa-solid fa-hand-holding-dollar menu-icon"></i>
+              <span class="menu-title">Withdrawals</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="withdraw">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/withdrawal/withdrawal.html">Summary</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="withdraw">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/withdrawal/pendingwithdraw.html">Pending</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="withdraw">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/withdrawal/rejectedwithdraw.html">Rejected</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/debit.html" aria-expanded="false" aria-controls="tables">
+              <i class="ti-credit-card menu-icon"></i>
+              <span class="menu-title">Debit/Credit</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/balance.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-balance-scale menu-icon"></i>
+              <span class="menu-title">System Balance</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/message.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-comments menu-icon"></i>
+              <span class="menu-title">Messsage</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/FTF.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-archive menu-icon"></i>
+              <span class="menu-title">FTF Files</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/reports.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-file menu-icon"></i>
+              <span class="menu-title">Reports</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/invoice.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-receipt menu-icon"></i>
+              <span class="menu-title">Invoices</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/graphs.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-line-chart menu-icon"></i>
+              <span class="menu-title">Graphs</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/gateway.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-users menu-icon"></i>
+              <span class="menu-title">Gateway Owners</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/certificate.html" aria-expanded="false" aria-controls="auth">
+              <i class="fa fa-bank menu-icon"></i>
+              <span class="menu-title">Bank Certificates</span>
+            </a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/gallery.html" aria-expanded="false" aria-controls="error">
+              <i class="fa fa-camera menu-icon"></i>
+              <span class="menu-title">Gallery</span>
+
+            </a>
+          </li>
+          <li class="nav-item" id="btn-goto-mall">
+            <a class="nav-link" href="#" onclick="showModalPopUp()">
+              <i class="fa fa-shopping-cart menu-icon"></i>
+              <span class="menu-title">Payle Mall</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/rental.html">
+              <i class="fa fa-asterisk menu-icon"></i>
+              <span class="menu-title">Rental</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/settings/settings.html">
+              <i class="fa fa-gear menu-icon"></i>
+              <span class="menu-title">Settings</span>
+            </a>
+          </li>
+
+
+
+
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+            
+              
+                
+            <div>
+                <div class="heading-line2">
+                    <label>Block merchants</label>
+                     <a href="./exportblockmerchant?sort=createdDate,desc&amp;name=&amp;contactnumber=&amp;code=" class="excel-modal btn btn-lg btnbspr
+               btn-default space-btn exprot-btn ma-r-5"> <strong>CSV </strong>
+                <span class="fa-solid fa-file-export "></span></a>
+    
+                    <div class="clearfix"></div>
+                </div>
+                      <a style="float:right" href="/pages/settings/settings.html">Go back to Settings</a>
+                
+                        <!--    search here-->
+                        <div>
+                            <div class="searchbox set-6">
+                            <div class="form-group">
+                                <input class="form-control button-click-block-merchant" type="text" name="requestcode" value="" placeholder="Merchant code">
+                            </div>
+                        </div>
+                        <div class="searchbox set-6">
+                            <div class="form-group ">
+                                <input class="form-control button-click-block-merchant" type="text" name="requestname" value="" placeholder="Merchant name">
+                            </div>
+                        </div>
+                        <div class="searchbox set-6">
+                            <div class="form-group ">
+                                <input class="form-control button-click-block-merchant" type="text" name="requestcontactno" value="" placeholder="Contact">
+                            </div>
+                        </div>     
+                            <div class="searchbox-m">
+                                <button id="btn-search-block-merchant" type="submit" class="btn btn-success  
+                                        btn-right-controle f-r btn-search-block-merchant">
+                                    <span class="fa-solid fa-search"></span>
+                                    <span>Search</span>
+                                </button>
+                            </div>
+                            <div class="searchbox-m">
+                                <a role="button" class="btn btn-success btn-right-controle" href="./blockmerchant">
+                                    <span class="fa-solid fa-refresh"></span>
+                                    <span>All</span></a>
+                            </div>
+                            <div class="searchbox"></div>
+                            
+                        </div>
+                        <!--    search end-->
+        
+                <div class="clearfix"></div><br>
+    
+    
+                <!--    grid view here-->
+                <div class="teble-scroll">
+                    <div class="teble-scroll-content">
+                         <table id="tbl_history" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Id</th>  
+                                <th><a href="./blockmerchant?sort=userName,asc&amp;code=&amp;name=&amp;amount=&amp;numbertransactions=&amp;commissionamount=&amp;contactnumber=&amp;category=">
+                                        <span>Merchant code</span>
+                                    </a></th> 
+                                <th><a href="./blockmerchant?sort=merchantName,asc&amp;code=&amp;name=&amp;amount=&amp;numbertransactions=&amp;commissionamount=&amp;contactnumber=&amp;category=">
+                                        <span>Merchant name</span>
+                                    </a></th> 
+                                <th><a href="./blockmerchant?sort=businessName,asc&amp;code=&amp;name=&amp;amount=&amp;numbertransactions=&amp;commissionamount=&amp;contactnumber=&amp;category=">
+                                        <span>Business name</span>
+                                    </a></th> 
+                                <th><a href="./blockmerchant?sort=validCivilIdStatus,asc&amp;code=&amp;name=&amp;amount=&amp;numbertransactions=&amp;commissionamount=&amp;contactnumber=&amp;category=">
+                                        <span>Civil id</span></a></th>
+                                <th><a href="./blockmerchant?sort=createdDate,asc&amp;code=&amp;name=&amp;amount=&amp;numbertransactions=&amp;commissionamount=&amp;contactnumber=&amp;category=">
+                                        <span>Reg date</span></a></th>
+                                <th><a href="./blockmerchant?sort=loginCount,asc&amp;code=&amp;name=&amp;amount=&amp;numbertransactions=&amp;commissionamount=&amp;contactnumber=&amp;category=">
+                                        <span># of logins</span></a></th>
+                                <th><a href="./blockmerchant?sort=ledgerBalanceAmount,asc&amp;code=&amp;name=&amp;amount=&amp;numbertransactions=&amp;commissionamount=&amp;contactnumber=&amp;category=">
+                                        <span>Total amount</span></a></th>
+                                <th><a href="./blockmerchant?sort=totalTransactionCount,asc&amp;code=&amp;name=&amp;amount=&amp;numbertransactions=&amp;commissionamount=&amp;contactnumber=&amp;category=">
+                                        # <span>Transactions</span></a></th>
+                                <th><a href="./blockmerchant?sort=systemEarnAmount,asc&amp;code=&amp;name=&amp;amount=&amp;numbertransactions=&amp;commissionamount=&amp;contactnumber=&amp;category=">
+                                        <span>Commission</span></a></th>
+                                <th><a href="./blockmerchant?sort=contactNumber,asc&amp;code=&amp;name=&amp;amount=&amp;numbertransactions=&amp;commissionamount=&amp;contactnumber=&amp;category=">
+                                        <span>Contact</span></a></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <a href="./merchantcashbook?id=283873" target="_blanck">283873</a>
+                                </td>
+                                <td>test test</td>
+                                <td>test</td>
+                                <td><img src="/images/0.png"></td>
+                                <td>2022-08-23 12:38:15</td>
+                                <td>0</td>
+                                <td>0.000</td>
+                                <td>0</td>
+                                <td>0.000</td>
+                                <td>456789098765</td>
+                                <td>
+                                    <button data-id="283873" data-url="./makeunblockmerchant" class="btn btn-success btn-xs btnbspr btn-whitelist">
+                                        <span class="fa-solid fa-check"></span>
+                                        <lable>Unblock</lable></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>
+                                    <a href="./merchantcashbook?id=283853" target="_blanck">283853</a>
+                                </td>
+                                <td>Random Random</td>
+                                <td>Random</td>
+                                <td><img src="/images/0.png"></td>
+                                <td>2022-08-10 20:46:24</td>
+                                <td>0</td>
+                                <td>0.000</td>
+                                <td>0</td>
+                                <td>0.000</td>
+                                <td>Random</td>
+                                <td>
+                                    <button data-id="283853" data-url="./makeunblockmerchant" class="btn btn-success btn-xs btnbspr btn-whitelist">
+                                        <span class="fa-solid fa-check"></span>
+                                        <lable>Unblock</lable></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>
+                                    <a href="./merchantcashbook?id=283793" target="_blanck">283793</a>
+                                </td>
+                                <td>b g gh</td>
+                                <td>hh</td>
+                                <td><img src="/images/0.png"></td>
+                                <td>2022-04-04 19:49:39</td>
+                                <td>7</td>
+                                <td>0.000</td>
+                                <td>0</td>
+                                <td>0.000</td>
+                                <td>9636994444</td>
+                                <td>
+                                    <button data-id="283793" data-url="./makeunblockmerchant" class="btn btn-success btn-xs btnbspr btn-whitelist">
+                                        <span class="fa-solid fa-check"></span>
+                                        <lable>Unblock</lable></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>
+                                    <a href="./merchantcashbook?id=283765" target="_blanck">283765</a>
+                                </td>
+                                <td>Pasan Pramuditha mudalige</td>
+                                <td>Insharp Technologies 1</td>
+                                <td><img src="/images/0.png"></td>
+                                <td>2022-02-02 13:07:35</td>
+                                <td>0</td>
+                                <td>0.000</td>
+                                <td>0</td>
+                                <td>0.000</td>
+                                <td>07653985533</td>
+                                <td>
+                                    <button data-id="283765" data-url="./makeunblockmerchant" class="btn btn-success btn-xs btnbspr btn-whitelist">
+                                        <span class="fa-solid fa-check"></span>
+                                        <lable>Unblock</lable></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>
+                                    <a href="./merchantcashbook?id=283710" target="_blanck">283710</a>
+                                </td>
+                                <td>sample wampp sasa</td>
+                                <td>sasas</td>
+                                <td><img src="/images/0.png"></td>
+                                <td>2021-05-12 15:07:46</td>
+                                <td>2</td>
+                                <td>0.000</td>
+                                <td>0</td>
+                                <td>0.000</td>
+                                <td>2353623236</td>
+                                <td>
+                                    <button data-id="283710" data-url="./makeunblockmerchant" class="btn btn-success btn-xs btnbspr btn-whitelist">
+                                        <span class="fa-solid fa-check"></span>
+                                        <lable>Unblock</lable></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>
+                                    <a href="./merchantcashbook?id=270294" target="_blanck">270294</a>
+                                </td>
+                                <td>Sample New Member</td>
+                                <td>After Mysql version update</td>
+                                <td><img src="/images/4.png"></td>
+                                <td>2021-02-18 10:45:01</td>
+                                <td>0</td>
+                                <td>99.650</td>
+                                <td>1</td>
+                                <td>0.625</td>
+                                <td>64974797997979</td>
+                                <td>
+                                    <button data-id="270294" data-url="./makeunblockmerchant" class="btn btn-success btn-xs btnbspr btn-whitelist">
+                                        <span class="fa-solid fa-check"></span>
+                                        <lable>Unblock</lable></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>
+                                    <a href="./merchantcashbook?id=270293" target="_blanck">270293</a>
+                                </td>
+                                <td>mohamed redha shalabi</td>
+                                <td>ببجي ‏اكس ‏_꧁PUBGGX꧁ ‎</td>
+                                <td><img src="/images/0.png"></td>
+                                <td>2021-02-17 07:52:09</td>
+                                <td>0</td>
+                                <td>19.230</td>
+                                <td>4</td>
+                                <td>1.615</td>
+                                <td>50111215</td>
+                                <td>
+                                    <button data-id="270293" data-url="./makeunblockmerchant" class="btn btn-success btn-xs btnbspr btn-whitelist">
+                                        <span class="fa-solid fa-check"></span>
+                                        <lable>Unblock</lable></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>
+                                    <a href="./merchantcashbook?id=259110" target="_blanck">259110</a>
+                                </td>
+                                <td>First747483 mid998348 last648159</td>
+                                <td>mybusiness47264</td>
+                                <td><img src="/images/0.png"></td>
+                                <td>2020-11-25 00:03:18</td>
+                                <td>1</td>
+                                <td>0.000</td>
+                                <td>0</td>
+                                <td>0.000</td>
+                                <td>42750479035</td>
+                                <td>
+                                    <button data-id="259110" data-url="./makeunblockmerchant" class="btn btn-success btn-xs btnbspr btn-whitelist">
+                                        <span class="fa-solid fa-check"></span>
+                                        <lable>Unblock</lable></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>
+                                    <a href="./merchantcashbook?id=259105" target="_blanck">259105</a>
+                                </td>
+                                <td>First668462 mid355981 last472273</td>
+                                <td>mybusiness363085</td>
+                                <td><img src="/images/0.png"></td>
+                                <td>2020-11-24 23:37:40</td>
+                                <td>1</td>
+                                <td>0.000</td>
+                                <td>0</td>
+                                <td>0.000</td>
+                                <td>42749131298</td>
+                                <td>
+                                    <button data-id="259105" data-url="./makeunblockmerchant" class="btn btn-success btn-xs btnbspr btn-whitelist">
+                                        <span class="fa-solid fa-check"></span>
+                                        <lable>Unblock</lable></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>
+                                    <a href="./merchantcashbook?id=258862" target="_blanck">258862</a>
+                                </td>
+                                <td>First823273 mid635727 last221109</td>
+                                <td>mybusiness515308</td>
+                                <td><img src="/images/4.png"></td>
+                                <td>2020-11-23 17:29:07</td>
+                                <td>1</td>
+                                <td>1649.650</td>
+                                <td>1</td>
+                                <td>0.625</td>
+                                <td>42704772518</td>
+                                <td>
+                                    <button data-id="258862" data-url="./makeunblockmerchant" class="btn btn-success btn-xs btnbspr btn-whitelist">
+                                        <span class="fa-solid fa-check"></span>
+                                        <lable>Unblock</lable></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                         </table>
+                    </div>
+                    <!-- customers pagination -->
+        <!--            ToDo need to chant paging-->
+                        <nav aria-label="Pagination">
+                            <ul class="pagination justify-content-center font-weight-medium">
+                                <li class="page-item disabled">
+                                    <a class="page-link svg-icon" href="./blockmerchant?page=1&amp;sort=createdDate,desc&amp;code=&amp;name=&amp;amount=&amp;numbertransactions=&amp;commissionamount=&amp;contactnumber=&amp;category=" aria-label="Previous" title="Previous Page" rel="tooltip">
+                                        <span aria-hidden="true" data-feather="chevrons-left" width="20" height="20">First</span>
+                                    </a>
+                                </li>
+                                <li class="page-item disabled">
+                                    <a class="page-link svg-icon" href="./blockmerchant?page=1&amp;sort=createdDate,desc&amp;code=&amp;name=&amp;amount=&amp;numbertransactions=&amp;commissionamount=&amp;contactnumber=&amp;category=" aria-label="Previous" title="Previous Page" rel="tooltip">
+                                        <span aria-hidden="true" data-feather="chevrons-left" width="20" height="20">Prev</span>
+                                    </a>
+                                </li>
+                                <li class="page-item active">
+                                    <a class="page-link" href="./blockmerchant?page=1&amp;sort=createdDate,desc&amp;code=&amp;name=&amp;amount=&amp;numbertransactions=&amp;commissionamount=&amp;contactnumber=&amp;category=" title="Page 1" rel="tooltip">1</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="./blockmerchant?page=2&amp;sort=createdDate,desc&amp;code=&amp;name=&amp;amount=&amp;numbertransactions=&amp;commissionamount=&amp;contactnumber=&amp;category=" title="Page 2" rel="tooltip">2</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="./blockmerchant?page=3&amp;sort=createdDate,desc&amp;code=&amp;name=&amp;amount=&amp;numbertransactions=&amp;commissionamount=&amp;contactnumber=&amp;category=" title="Page 3" rel="tooltip">3</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="./blockmerchant?page=4&amp;sort=createdDate,desc&amp;code=&amp;name=&amp;amount=&amp;numbertransactions=&amp;commissionamount=&amp;contactnumber=&amp;category=" title="Page 4" rel="tooltip">4</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="./blockmerchant?page=5&amp;sort=createdDate,desc&amp;code=&amp;name=&amp;amount=&amp;numbertransactions=&amp;commissionamount=&amp;contactnumber=&amp;category=" title="Page 5" rel="tooltip">5</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="./blockmerchant?page=6&amp;sort=createdDate,desc&amp;code=&amp;name=&amp;amount=&amp;numbertransactions=&amp;commissionamount=&amp;contactnumber=&amp;category=" title="Page 6" rel="tooltip">6</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="./blockmerchant?page=7&amp;sort=createdDate,desc&amp;code=&amp;name=&amp;amount=&amp;numbertransactions=&amp;commissionamount=&amp;contactnumber=&amp;category=" title="Page 7" rel="tooltip">7</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="./blockmerchant?page=8&amp;sort=createdDate,desc&amp;code=&amp;name=&amp;amount=&amp;numbertransactions=&amp;commissionamount=&amp;contactnumber=&amp;category=" title="Page 8" rel="tooltip">8</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="./blockmerchant?page=9&amp;sort=createdDate,desc&amp;code=&amp;name=&amp;amount=&amp;numbertransactions=&amp;commissionamount=&amp;contactnumber=&amp;category=" title="Page 9" rel="tooltip">9</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="./blockmerchant?page=10&amp;sort=createdDate,desc&amp;code=&amp;name=&amp;amount=&amp;numbertransactions=&amp;commissionamount=&amp;contactnumber=&amp;category=" title="Page 10" rel="tooltip">10</a>
+                                </li>
+                                <li class="page-item disabled">
+                                    <a class="page-link svg-icon" href="#">
+                                        <span data-feather="more-horizontal" width="20" height="20">...</span>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link svg-icon" href="./blockmerchant?page=2&amp;sort=createdDate,desc&amp;code=&amp;name=&amp;amount=&amp;numbertransactions=&amp;commissionamount=&amp;contactnumber=&amp;category=" aria-label="Next" title="Next Page" rel="tooltip">
+                                        <span aria-hidden="true" data-feather="chevrons-right" width="20" height="20">Next</span>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link svg-icon" href="./blockmerchant?page=66&amp;sort=createdDate,desc&amp;code=&amp;name=&amp;amount=&amp;numbertransactions=&amp;commissionamount=&amp;contactnumber=&amp;category=" aria-label="Previous" title="Previous Page" rel="tooltip">
+                                        <span aria-hidden="true" data-feather="chevrons-left" width="20" height="20">Last</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                </div>
+                <!--    grid view end-->
+            </div>
+
+        </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+      <!-- content-wrapper ends -->
+      <script>
+
+        var popUpObj;
+    
+        function showModalPopUp(){
+    
+          window.alert("Payle Mall is not currently available!!!!!!!")
+    
+    
+        }
+    
+      </script>
+      <!-- partial:partials/_footer.html -->
+      <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+          <span class="text-muted text-center text-sm-left d-block d-sm-inline-block"> Premium <a
+              href="https://home.payleq8.com/" target="_blank">PayLe Kuwait</a></span>
+          <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © .<a
+              href="https://home.payleq8.com/" target="_blank">Payle 2021</a> </span>
+        </div>
+      </footer>
+      <!-- partial -->
+    </div>
+    <!-- main-panel ends -->
+  </div>
+  <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="../../vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="../../../../vendors/chart.js/Chart.min.js"></script>
+  <script src="../../vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="../../vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="../../js/dataTables.select.min.js"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="../../js/off-canvas.js"></script>
+  <script src="../../js/hoverable-collapse.js"></script>
+  <script src="../../js/template.js"></script>
+  <script src="../../js/settings.js"></script>
+  <script src="../../js/todolist.js"></script>
+  <script src="../../package.json"></script>
+  <script src="../../js/Chart.roundedBarCharts.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="../../js/dashboard.js"></script>
+  <script src="../../js/Chart.roundedBarCharts.js"></script>
+  <!-- End custom js for this page-->
+  <script src="../../js/chart.js"></script>
+  <script>
+    $('.dropdown-toggle').dropdown();
+</script>
+<script> InitProgressBar();</script>
+  <div id="ProgressBarContainer"><div class="modal fade" id="loading1" data-rms="" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:100%"><div class="progress progress-striped active" style="margin: 25% auto;width:100%; max-width:400px;"><div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%;"></div></div></div></div>
+  <divcursor id="divCursor" class="" style="position: absolute; border: none; padding: 3px; border-radius: 2px; background-color: rgba(0, 0, 0, 0.8); color: white; font-family: Arial; font-size: 12pt; font-style: normal; z-index: 999; left: 933px; top: 730px; display: none;">Active merchants:42105 (96.9 %)</divcursor>
+</body>
+
+</html>

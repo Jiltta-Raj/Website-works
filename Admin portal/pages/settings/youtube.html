@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Youtube Videos</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../../vendors/feather/feather.css">
+    <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../../vendors/font-awesome/css/all.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="../../vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="../../js/select.dataTables.min.css">
+    <link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="../../images/logo-4.png" />
+  </head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="/index.html"><img src="/images/logo-4.png" class="mr-2"
+            alt="logo" /></a>
+
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
+              data-toggle="dropdown">
+              <i class="icon-globe"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+              aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Choose Prefered Language</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-dark">
+                    <i class="ti-world mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Arabic</h6>
+
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="ti-world mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">English</h6>
+
+                </div>
+              </a>
+
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="/images/faces/face28.jpg" alt="profile" />
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="/pages/profile.html">
+                <i class="ti-settings text-primary"></i>
+                Profile Settings
+              </a>
+              <a class="dropdown-item" href="/pages/forgotpassword.html">
+                <i class="ti-marker text-primary"></i>
+                Change Password
+              </a>
+              <a class="dropdown-item" href="/pages/newadmin.html">
+                <i class="ti-plus text-primary"></i>
+                Add new admin
+              </a>
+              <a class="dropdown-item" href="/pages/login.html">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
+
+            </div>
+          </li>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+            data-toggle="offcanvas">
+            <span class="icon-menu"></span>
+          </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">
+              <i class="fa-solid fa-dashboard menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/merchant/merchants.html" aria-expanded="false" aria-controls="ui-basic">
+              <i class="fa fa-user-circle menu-icon"></i>
+              <span class="menu-title"> Merchants</span>
+
+            </a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#transaction" aria-expanded="false" aria-controls="transaction">
+              <i class="fa-solid fa-circle-dollar-to-slot menu-icon"></i>
+              <span class="menu-title">Transactions</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/transaction.html">All Transactions</a></li>
+              </ul>
+            </div>
+
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/summary.html">Summary</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/incomplete.html">Incomplete</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/vm.html">Visa Master</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/completevm.html">Complete VM</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/incompletevm.html">Incomplete VM</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/wallet.html">Payle Wallet</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="/pages/transactions/amex.html">Amex Transactions</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#withdraw" aria-expanded="false" aria-controls="withdraw">
+              <i class="fa-solid fa-hand-holding-dollar menu-icon"></i>
+              <span class="menu-title">Withdrawals</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="withdraw">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/withdrawal/withdrawal.html">Summary</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="withdraw">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/withdrawal/pendingwithdraw.html">Pending</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="withdraw">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/withdrawal/rejectedwithdraw.html">Rejected</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/debit.html" aria-expanded="false" aria-controls="tables">
+              <i class="ti-credit-card menu-icon"></i>
+              <span class="menu-title">Debit/Credit</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/balance.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-balance-scale menu-icon"></i>
+              <span class="menu-title">System Balance</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/message.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-comments menu-icon"></i>
+              <span class="menu-title">Messsage</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/FTF.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-archive menu-icon"></i>
+              <span class="menu-title">FTF Files</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/reports.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-file menu-icon"></i>
+              <span class="menu-title">Reports</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/invoice.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-receipt menu-icon"></i>
+              <span class="menu-title">Invoices</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/graphs.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-line-chart menu-icon"></i>
+              <span class="menu-title">Graphs</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/gateway.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-users menu-icon"></i>
+              <span class="menu-title">Gateway Owners</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/certificate.html" aria-expanded="false" aria-controls="auth">
+              <i class="fa fa-bank menu-icon"></i>
+              <span class="menu-title">Bank Certificates</span>
+            </a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/gallery.html" aria-expanded="false" aria-controls="error">
+              <i class="fa fa-camera menu-icon"></i>
+              <span class="menu-title">Gallery</span>
+
+            </a>
+          </li>
+          <li class="nav-item" id="btn-goto-mall">
+            <a class="nav-link" href="#" onclick="showModalPopUp()">
+              <i class="fa fa-shopping-cart menu-icon"></i>
+              <span class="menu-title">Payle Mall</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/rental.html">
+              <i class="fa fa-asterisk menu-icon"></i>
+              <span class="menu-title">Rental</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/settings/settings.html">
+              <i class="fa fa-gear menu-icon"></i>
+              <span class="menu-title">Settings</span>
+            </a>
+          </li>
+
+
+
+
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+            
+              
+                
+            <div>
+                <div class="heading-line2">
+                    <label>Youtube Videos</label>
+                       
+                    <div class="clearfix"></div>
+                </div><a style="float:right" href="/pages/settings/settings.html">Go back to Settings</a>
+                <div class="row">
+                    <form method="post" id="requestForm">
+                   <div class="col-sm-4">
+                       <div class="form-group" style="position: relative;">
+                           <label>Add youtube link</label>
+                            <input class="form-control" type="text" name="urlLink" id="urlLink" placeholder="Add youtube link">
+                       </div>
+                   </div>
+                   <div class="col-sm-4">
+                           <div class="form-group" style="position: relative;">
+                           <label>Title</label>
+                           <input class="form-control" type="text" name="title" id="title" placeholder="Title">
+                   </div>
+                   </div>
+                   <div class="col-sm-4">
+                           <div class="form-group" style="position: relative;">
+                           <label>&nbsp;</label>
+                           <div class="clearfix"></div>
+                           <input class="btn btn-success " id="btn_submit_requestnewyoutubelink" type="button" value="Submit" name="">
+                           </div>
+                   </div>
+                   </form>
+                   <div class="clearfix"></div><br>
+               </div>
+               <hr style="margin-top: 0px; margin-bottom: 35px;">
+               <div class="clearfix"></div>
+               <div thumbnail="" col-sm-6="" col-md-4="" id="youtubelinks">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label class="langnamehide">خدمة ادفعلي تحميك من الطلبات الوهمية و الحجوزات الملغية </label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/J5RuvmaTYVQ?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="8" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="8" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">طريقة الدفع لبطاقة الكي نت </label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/QPaxSCB5FVA?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="10" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="10" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">طريقة الدفع من خلال التطبيق </label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/bZA3RGgySSM?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="12" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="12" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">لاصحاب مكاتب السيارات - لا تخترب البيعة استلم العربون بنفس الوقت و وين ما تكون </label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/DDBhTTQCpBM?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="16" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="16" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">طريقة التسجيل للتاجر و طريقة الدفع للعميل - بامكانك مشاركة الفيديو   </label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/fdKsj9quEeE?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="17" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="17" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">لاصحاب مشاريع تأجير اليخوت و الطراريد </label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/eOlHLy_vNXo?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="19" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="19" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">لاصحاب محلات الورود و الزهور </label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/xT3zIT_26Sc?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="20" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="20" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">اذا خلصت العيادي  استلم عيديتك مع خدمة ( ادفعلي ) عيدكم مبارك </label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/zDPg7DrjGJM?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="22" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="22" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">لتأجير الشاليهات و المزارع و الاستراحات </label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/CZg4DW-IQoE?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="24" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="24" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">لحملات الحج و العمرة </label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/-Es88A-NOxI?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="25" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="25" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">استلم اجاراتك وانت بالبيت ما تحتاج مندوب</label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/9TGpYjrNhkg?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="26" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="26" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">للصالونات النسائية - حجوزاتك مضمونه 100%</label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/G-MxOKtE8GY?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="27" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="27" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">لمكاتب السفريات - حجوزاتك مضمونه معانا </label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/Ku8X7qMk5WU?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="28" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="28" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">للعيادات الطبيه حجوزاتك مضمونة </label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/n72nJfyEcFU?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="29" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="29" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">عندك كافية - طلباتك مضمونة 100% معانا </label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/v9da5u5T5Yk?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="30" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="30" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">لشركات و خدمات التوصيل </label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/vCKTjHSgWKg?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="31" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="31" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">لشركات غسيل السيارات بالمنزل </label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/G6EWlNynVVw?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="32" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="32" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">من المستفيد من خدمة ادفعلي ؟</label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/wsHmnRgrbAE?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="33" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="33" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">لحجز اجود المنتجات شنط ساعات ...</label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/12clp7mcUGY?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="34" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="34" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">خدمة مميزة لأصحاب المعاهد التدريبية </label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/5pw_MDO7RDs?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="35" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="35" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">لمشاريع تأجير المخيمات والشاليهات </label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/JO-lrEE5AwQ?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="36" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="36" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">للمصممين استلم قيمة مبيعاتك فورا </label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/lecZOUaA4b4?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="37" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="37" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">طريقة انشاء فاتورة </label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/497cRzuNK4k?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="38" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="38" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">خدمة ادفعلي اساس اي مشروع صغير </label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/B2wY7-3pnuU?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="39" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="39" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">الطريقة الجديدة للدفع بالكي نت OTP</label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/zQi1r8YhxZo?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="40" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="40" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">تعرف على تطبيق ادفعلي من الداخل </label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/nG401x3yK3s?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="41" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="41" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">طريقة تحميل الصور في رابط الدفع</label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/eJUxFn-B3l8?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="42" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="42" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">التحديث الجديد و اهم المميزات </label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/G0As20JVr0c?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="43" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="43" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">دعاية بشار الجزاف و سلينا قومز :)</label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/DKPAd07EDxg?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="44" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="44" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">ما عندج كاااش انا عندي خدمة ادفعلي </label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/0IHx81wqx4M?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="45" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="45" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">خدمة ادفعلي صممت خصيصا لاصحاب المشروعات الصغيرة</label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/zIpEWVQszSo?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="46" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="46" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">شكر و تقدير لكل المشتركين</label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/R3lMOJFcYeI?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="47" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="47" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">محتاج 20 او 50 او 1000 جهاز كي نت للسواقين؟</label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/ZZ_O4js4qxU?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="48" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="48" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">حول رابط الدفع الى معرض صور منتجاتك</label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/EI7SaTbJngU?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="49" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="49" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">بامكانك وضع اللوجو و صور منتجاتك برابط الدفع </label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/OLlJEwpIv-g?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="50" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="50" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">لاصحاب الحرف </label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/AM3DjmjwLew?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="51" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="51" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">استمتع باستلام فلوسك اونلاين</label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/gFub3ywXH4Y?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="53" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="53" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">طريقة التسجيل في ادفعلي</label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/GdRgJtm5IEM?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="54" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="54" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">عندك مطعم ؟ يعني انت محتاج ادفعلي</label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/mdBUMbr2SUI?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="55" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="55" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">sssss</label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/eaoJ_op_-a4?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="56" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="56" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">sssss</label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/eaoJ_op_-a4?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="57" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="57" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="langnamehide">test figma</label>
+                        <div class="form-group">
+                            <iframe class="youtubevideo" width="100%" height="315" src="https://www.youtube.com/embed/Cx2dkpBxst8?autoplay=0">
+                            </iframe>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="tools">
+                            <button type="button" class="link_dell_button btn 
+                                    btn-danger btn-sm f-r btn-youtubelink" data-id="58" data-url="./requestremoveyoutubelink">
+                                <span class="fa-solid fa-trash" aria-hidden="true"></span> 
+                            </button>
+                            <span class="btn btn-success btn-sm">
+                                <input type="checkbox" value="58" style="padding: 0px; margin: 0px; 
+                                    position: relative; top: 2px;" checked="checked">
+                                <label>Set video visible</label>
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+               
+                     
+                
+            </div>
+
+        </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+      <!-- content-wrapper ends -->
+      <script>
+
+        var popUpObj;
+    
+        function showModalPopUp(){
+    
+          window.alert("Payle Mall is not currently available!!!!!!!")
+    
+    
+        }
+    
+      </script>
+      <!-- partial:partials/_footer.html -->
+      <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+          <span class="text-muted text-center text-sm-left d-block d-sm-inline-block"> Premium <a
+              href="https://home.payleq8.com/" target="_blank">PayLe Kuwait</a></span>
+          <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © .<a
+              href="https://home.payleq8.com/" target="_blank">Payle 2021</a> </span>
+        </div>
+      </footer>
+      <!-- partial -->
+    </div>
+    <!-- main-panel ends -->
+  </div>
+  <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="../../vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="../../../../vendors/chart.js/Chart.min.js"></script>
+  <script src="../../vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="../../vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="../../js/dataTables.select.min.js"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="../../js/off-canvas.js"></script>
+  <script src="../../js/hoverable-collapse.js"></script>
+  <script src="../../js/template.js"></script>
+  <script src="../../js/settings.js"></script>
+  <script src="../../js/todolist.js"></script>
+  <script src="../../package.json"></script>
+  <script src="../../js/Chart.roundedBarCharts.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="../../js/dashboard.js"></script>
+  <script src="../../js/Chart.roundedBarCharts.js"></script>
+  <!-- End custom js for this page-->
+  <script src="../../js/chart.js"></script>
+  <script>
+    $('.dropdown-toggle').dropdown();
+</script>
+<script> InitProgressBar();</script>
+  <div id="ProgressBarContainer"><div class="modal fade" id="loading1" data-rms="" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:100%"><div class="progress progress-striped active" style="margin: 25% auto;width:100%; max-width:400px;"><div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%;"></div></div></div></div>
+  <divcursor id="divCursor" class="" style="position: absolute; border: none; padding: 3px; border-radius: 2px; background-color: rgba(0, 0, 0, 0.8); color: white; font-family: Arial; font-size: 12pt; font-style: normal; z-index: 999; left: 933px; top: 730px; display: none;">Active merchants:42105 (96.9 %)</divcursor>
+</body>
+
+</html>

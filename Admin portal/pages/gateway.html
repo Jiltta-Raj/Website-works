@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Gateway Owners</title>
+    <!-- plugins:css -->
+    
+    <link rel="stylesheet" href="../../vendors/feather/feather.css">
+    <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../../vendors/font-awesome/css/all.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    
+    <link rel="stylesheet" href="../../vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="../../js/select.dataTables.min.css">
+    <link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
+    <link rel="stylesheet" href="/scss/vertical-layout-light/style.scss">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="../../images/logo-4.png" />
+  </head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="/index.html"><img src="../../images/logo-4.png" class="mr-2"
+            alt="logo" /></a>
+
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
+              data-toggle="dropdown">
+              <i class="icon-globe"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+              aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Choose Prefered Language</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-dark">
+                    <i class="ti-world mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Arabic</h6>
+
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="ti-world mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">English</h6>
+
+                </div>
+              </a>
+
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="../../images/faces/face28.jpg" alt="profile" />
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="/pages/profile.html">
+                <i class="ti-settings text-primary"></i>
+                Profile Settings
+              </a>
+              <a class="dropdown-item" href="/pages/forgotpassword.html">
+                <i class="ti-marker text-primary"></i>
+                Change Password
+              </a>
+              <a class="dropdown-item" href="/pages/login.html">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
+
+            </div>
+          </li>
+
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+            data-toggle="offcanvas">
+            <span class="icon-menu"></span>
+          </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">
+              <i class="fa-solid fa-dashboard menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/merchant/merchants.html" aria-expanded="false" aria-controls="ui-basic">
+              <i class="fa fa-user-circle menu-icon"></i>
+              <span class="menu-title"> Merchants</span>
+
+            </a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#transaction" aria-expanded="false" aria-controls="transaction">
+              <i class="fa-solid fa-circle-dollar-to-slot menu-icon"></i>
+              <span class="menu-title">Transactions</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/transaction.html">All Transactions</a></li>
+              </ul>
+            </div>
+
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/summary.html">Summary</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/incomplete.html">Incomplete</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/vm.html">Visa Master</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/completevm.html">Complete VM</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/incompletevm.html">Incomplete VM</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/wallet.html">Payle Wallet</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="/pages/transactions/amex.html">Amex Transactions</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#withdraw" aria-expanded="false" aria-controls="withdraw">
+              <i class="fa-solid fa-hand-holding-dollar menu-icon"></i>
+              <span class="menu-title">Withdrawals</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="withdraw">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/withdrawal/withdrawal.html">Summary</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="withdraw">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/withdrawal/pendingwithdraw.html">Pending</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="withdraw">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/withdrawal/rejectedwithdraw.html">Rejected</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/debit.html" aria-expanded="false" aria-controls="tables">
+              <i class="ti-credit-card menu-icon"></i>
+              <span class="menu-title">Debit/Credit</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/balance.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-balance-scale menu-icon"></i>
+              <span class="menu-title">System Balance</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/message.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-comments menu-icon"></i>
+              <span class="menu-title">Messsage</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/FTF.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-archive menu-icon"></i>
+              <span class="menu-title">FTF Files</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/reports.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-file menu-icon"></i>
+              <span class="menu-title">Reports</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/invoice.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-receipt menu-icon"></i>
+              <span class="menu-title">Invoices</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/graphs.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-line-chart menu-icon"></i>
+              <span class="menu-title">Graphs</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/gateway.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-users menu-icon"></i>
+              <span class="menu-title">Gateway Owners</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/certificate.html" aria-expanded="false" aria-controls="auth">
+              <i class="fa fa-bank menu-icon"></i>
+              <span class="menu-title">Bank Certificates</span>
+            </a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/gallery.html" aria-expanded="false" aria-controls="error">
+              <i class="fa fa-camera menu-icon"></i>
+              <span class="menu-title">Gallery</span>
+
+            </a>
+          </li>
+          <li class="nav-item" id="btn-goto-mall">
+            <a class="nav-link" href="#" onclick="showModalPopUp()">
+              <i class="fa fa-shopping-cart menu-icon"></i>
+              <span class="menu-title">Payle Mall</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/rental.html">
+              <i class="fa fa-asterisk menu-icon"></i>
+              <span class="menu-title">Rental</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/settings/settings.html">
+              <i class="fa fa-gear menu-icon"></i>
+              <span class="menu-title">Settings</span>
+            </a>
+          </li>
+
+
+
+
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+              
+            <div class="col-md-12 grid-margin transparent">
+                <div>
+   
+                    <div class="heading-line2">
+                        <label>Gateway Owners</label>
+                       
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="row">
+                                 <!-- merchant search here-->
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" id="request_merchantcode" name="requestmerchantcode" placeholder="Merchant code">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button class="btn_search btn btn-success  
+                                                btn-right-controle" data-url="./requestgateway" id="btn-request-gateway">
+                                            <span class="fa-solid fa-search"></span>
+                                            <span>New member</span>
+                                        </button>
+                                    </div>
+                            </div>
+                <!--    search here-->
+                        <div class="">
+                            <div class="searchbox set-6">
+                                <div class="form-group">
+                                    <input class="form-control button-click-gateway-owners" type="text" name="requestcode" value="" placeholder="Code">
+                                </div>
+                            </div>
+                            <div class="searchbox set-6">
+                                <div class="form-group ">
+                                    <input class="form-control button-click-gateway-owners" type="text" name="requestname" value="" placeholder="Merchant name">
+                                </div>
+                            </div>
+                            <div class="searchbox set-6">
+                                <div class="form-group ">
+                                    <input class="form-control button-click-gateway-owners" type="text" name="requestbusinessname" value="" placeholder="Business name">
+                                </div>
+                            </div>
+                            <div class="searchbox set-6">
+                                <div class="form-group ">
+                                    <input class="form-control button-click-gateway-owners" type="text" name="requestportalid" value="" placeholder="Portal id">
+                                </div>
+                            </div> 
+                            <div class="searchbox set-6">
+                                <div class="form-group ">
+                                    <input class="form-control button-click-gateway-owners" type="text" name="requestproductionresourcekey" value="" placeholder="Production resource key">
+                                </div>
+                            </div> 
+                            <div class="searchbox set-6">
+                                <div class="form-group ">
+                                    <input class="form-control button-click-gateway-owners" type="text" name="requestdevelopmentresourcekey" value="" placeholder="Development resource key">
+                                </div>
+                            </div> 
+                            
+                            <!-- Added By Asad 24/06/2022 -->
+                            <div class="searchbox set-6 page-size">
+                                <div class="form-group">
+                                    <select class="form-control" id="requestsize" name="requestsize">
+                                        <option value="10">Display</option>
+                                        <option value="30">30</option>
+                                        <option value="50">50</option>
+                                        <option value="70">70</option> 
+                                    </select> 
+                                </div>
+                            </div>
+                
+                            <div class="searchbox" style="width: 6%;">
+                                <button id="btn-search-gateway-owners" type="submit" class="btn-search-gateway-owners btn btn-success  btn-right-controle f-r">
+                                    <span class="fa-solid fa-search "></span>
+                                    <span>Search</span>
+                                </button>
+                            </div>
+                            <div class="searchbox" style="width: 3%;">
+                                <a role="button" class="btn btn-success btn-right-controle" href="./gatewayowners">
+                                    <span class="fa-solid fa-refresh"></span>
+                                    <span>All</span></a>
+                            </div>
+                        </div>
+                <!--    search end-->
+                
+                <div class="clearfix"></div>
+                <br>
+                
+                <!--    grid view here-->
+                        <div class="teble-scroll">
+                            <div class="teble-scroll-content">
+                                 <table id="tbl_history" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th></th>  
+                                        <th><a href="./gatewayowners?sort=merchantCode,asc&amp;code=&amp;name=&amp;businessname=&amp;portalid=&amp;productionresourcekey=&amp;developmentresourcekey="><span>Code</span></a></th> 
+                                        <th><a href="./gatewayowners?sort=name,asc&amp;code=&amp;name=&amp;businessname=&amp;portalid=&amp;productionresourcekey=&amp;developmentresourcekey="><span>Name</span></a></th> 
+                                        <th><a href="./gatewayowners?sort=businessName,asc&amp;code=&amp;name=&amp;businessname=&amp;portalid=&amp;productionresourcekey=&amp;developmentresourcekey="><span>Business name</span></a></th> 
+                                        <th><a href="./gatewayowners?sort=portalId,asc&amp;code=&amp;name=&amp;businessname=&amp;portalid=&amp;productionresourcekey=&amp;developmentresourcekey="><span>Portal id</span></a></th>
+                                        <th><a href="./gatewayowners?sort=productionResourcekey,asc&amp;code=&amp;name=&amp;businessname=&amp;portalid=&amp;productionresourcekey=&amp;developmentresourcekey="><span>Production resource key</span></a></th>
+                                        <th><a href="./gatewayowners?sort=developmentResourcekey,asc&amp;code=&amp;name=&amp;businessname=&amp;portalid=&amp;productionresourcekey=&amp;developmentresourcekey="><span>Development resource key</span></a></th>
+                                        <th><a href="./gatewayowners?sort=registerDate,asc&amp;code=&amp;name=&amp;businessname=&amp;portalid=&amp;productionresourcekey=&amp;developmentresourcekey="><span>Reg date</span></a></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <a href="./merchantcashbook?id=283828" target="_blank">283828</a>
+                                        </td>
+                                        <td>Bohra Fatema A</td>
+                                        <td>hsgduitiewu</td>
+                                        <td>993348230</td>
+                                        <td>5009133951839735</td>
+                                        <td>4433253906803272</td>
+                                        <td>2022-07-27 21:05:27</td>
+                                        <td>
+                                            <button class="btn btn-info btn-xs btnbspr space-btn
+                                                btn-action-production-gateway" data-url="./requestactiongateway" data-id="993348230" data-stage="1"> 
+                                                <span class="fa-solid fa-pencil"></span>
+                                            </button>
+                                            
+                                             <button class="btn btn-primary btn-xs btnbspr space-btn
+                                                btn-action-production-gateway" data-url="./requestactiongateway" data-stage="3" data-id="993348230">
+                                             <span class="fa-solid fa-lock"></span>
+                                            </button>
+                                            
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>
+                                            <a href="./merchantcashbook?id=283826" target="_blank">283826</a>
+                                        </td>
+                                        <td>Asad Aziz</td>
+                                        <td>OwnBusiness</td>
+                                        <td>1575381665</td>
+                                        <td>2749690098726429</td>
+                                        <td>8622500484953972</td>
+                                        <td>2022-07-27 20:56:57</td>
+                                        <td>
+                                            <button class="btn btn-info btn-xs btnbspr space-btn
+                                                btn-action-production-gateway" data-url="./requestactiongateway" data-id="1575381665" data-stage="1"> 
+                                                <span class="fa-solid fa-pencil"></span>
+                                            </button>
+                                            
+                                             <button class="btn btn-primary btn-xs btnbspr space-btn
+                                                btn-action-production-gateway" data-url="./requestactiongateway" data-stage="3" data-id="1575381665">
+                                             <span class="fa-solid fa-lock"></span>
+                                            </button>
+                                            
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>
+                                            <a href="./merchantcashbook?id=283799" target="_blank">283799</a>
+                                        </td>
+                                        <td>omar nezar hodrob</td>
+                                        <td>omar hodrob</td>
+                                        <td>2118246419</td>
+                                        <td>0464445392659723</td>
+                                        <td>7556190214294700</td>
+                                        <td>2022-05-23 14:33:50</td>
+                                        <td>
+                                            <button class="btn btn-info btn-xs btnbspr space-btn
+                                                btn-action-production-gateway" data-url="./requestactiongateway" data-id="2118246419" data-stage="1"> 
+                                                <span class="fa-solid fa-pencil"></span>
+                                            </button>
+                                            
+                                             <button class="btn btn-primary btn-xs btnbspr space-btn
+                                                btn-action-production-gateway" data-url="./requestactiongateway" data-stage="3" data-id="2118246419">
+                                             <span class="fa-solid fa-lock"></span>
+                                            </button>
+                                            
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>
+                                            <a href="./merchantcashbook?id=74712" target="_blank">74712</a>
+                                        </td>
+                                        <td>First709680 mid365386 last698885</td>
+                                        <td>mybusiness730277</td>
+                                        <td>113203037</td>
+                                        <td>3271286841458430</td>
+                                        <td>7066213936979329</td>
+                                        <td>2022-01-24 11:07:30</td>
+                                        <td>
+                                            <button class="btn btn-info btn-xs btnbspr space-btn
+                                                btn-action-production-gateway" data-url="./requestactiongateway" data-id="113203037" data-stage="1"> 
+                                                <span class="fa-solid fa-pencil"></span>
+                                            </button>
+                                            
+                                             <button class="btn btn-primary btn-xs btnbspr space-btn
+                                                btn-action-production-gateway" data-url="./requestactiongateway" data-stage="3" data-id="113203037">
+                                             <span class="fa-solid fa-lock"></span>
+                                            </button>
+                                            
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>
+                                            <a href="./merchantcashbook?id=259340" target="_blank">259340</a>
+                                        </td>
+                                        <td>First365885 mid734887 last366509</td>
+                                        <td>mybusiness574910</td>
+                                        <td>280911330</td>
+                                        <td></td>
+                                        <td>6460770416038035</td>
+                                        <td>2021-07-01 13:34:46</td>
+                                        <td>
+                                            
+                                            <button class="btn btn-yellow btn-xs btnbspr 
+                                                space-btn btn-action-production-gateway" data-url="./requestactiongateway" data-stage="2" data-id="280911330">
+                                            <span class="fa fa-asterisk"></span>
+                                            </button>
+                                             <button class="btn btn-primary btn-xs btnbspr space-btn
+                                                btn-action-production-gateway" data-url="./requestactiongateway" data-stage="3" data-id="280911330">
+                                             <span class="fa-solid fa-lock"></span>
+                                            </button>
+                                            
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>
+                                            <a href="./merchantcashbook?id=283704" target="_blank">283704</a>
+                                        </td>
+                                        <td>nimal Gaminda Perera</td>
+                                        <td>Nimal Perera</td>
+                                        <td>1670727392</td>
+                                        <td>6279563426007971</td>
+                                        <td>0018241024137721</td>
+                                        <td>2021-06-08 10:59:01</td>
+                                        <td>
+                                            <button class="btn btn-info btn-xs btnbspr space-btn
+                                                btn-action-production-gateway" data-url="./requestactiongateway" data-id="1670727392" data-stage="1"> 
+                                                <span class="fa-solid fa-pencil"></span>
+                                            </button>
+                                            
+                                             
+                                            <button class="btn btn-success btn-xs btnbspr space-btn
+                                            btn-action-production-gateway" data-url="./requestactiongateway" data-stage="4" data-id="1670727392">
+                                            <span class="fa-solid fa-check"></span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>
+                                            <a href="./merchantcashbook?id=283719" target="_blank">283719</a>
+                                        </td>
+                                        <td>g test test</td>
+                                        <td>test</td>
+                                        <td>1974370940</td>
+                                        <td></td>
+                                        <td>0233230115218956</td>
+                                        <td>2021-06-08 10:39:33</td>
+                                        <td>
+                                            
+                                            <button class="btn btn-yellow btn-xs btnbspr 
+                                                space-btn btn-action-production-gateway" data-url="./requestactiongateway" data-stage="2" data-id="1974370940">
+                                            <span class="fa fa-asterisk"></span>
+                                            </button>
+                                             <button class="btn btn-primary btn-xs btnbspr space-btn
+                                                btn-action-production-gateway" data-url="./requestactiongateway" data-stage="3" data-id="1974370940">
+                                             <span class="fa-solid fa-lock"></span>
+                                            </button>
+                                            
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>
+                                            <a href="./merchantcashbook?id=50005" target="_blank">50005</a>
+                                        </td>
+                                        <td>First461436 mid238296 last724521</td>
+                                        <td>mybusiness17919</td>
+                                        <td>645659048</td>
+                                        <td>7191746529353984</td>
+                                        <td>0302826569439776</td>
+                                        <td>2021-05-19 11:57:42</td>
+                                        <td>
+                                            <button class="btn btn-info btn-xs btnbspr space-btn
+                                                btn-action-production-gateway" data-url="./requestactiongateway" data-id="645659048" data-stage="1"> 
+                                                <span class="fa-solid fa-pencil"></span>
+                                            </button>
+                                            
+                                             <button class="btn btn-primary btn-xs btnbspr space-btn
+                                                btn-action-production-gateway" data-url="./requestactiongateway" data-stage="3" data-id="645659048">
+                                             <span class="fa-solid fa-lock"></span>
+                                            </button>
+                                            
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>
+                                            <a href="./merchantcashbook?id=283710" target="_blank">283710</a>
+                                        </td>
+                                        <td>sample wampp sasa</td>
+                                        <td>sasas</td>
+                                        <td>822130992</td>
+                                        <td></td>
+                                        <td>2759236440192807</td>
+                                        <td>2021-05-19 08:39:43</td>
+                                        <td>
+                                            
+                                            <button class="btn btn-yellow btn-xs btnbspr 
+                                                space-btn btn-action-production-gateway" data-url="./requestactiongateway" data-stage="2" data-id="822130992">
+                                            <span class="fa fa-asterisk"></span>
+                                            </button>
+                                             <button class="btn btn-primary btn-xs btnbspr space-btn
+                                                btn-action-production-gateway" data-url="./requestactiongateway" data-stage="3" data-id="822130992">
+                                             <span class="fa-solid fa-lock"></span>
+                                            </button>
+                                            
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>
+                                            <a href="./merchantcashbook?id=10946" target="_blank">10946</a>
+                                        </td>
+                                        <td>Laith Omar Suwieti</td>
+                                        <td>ليث</td>
+                                        <td>1578522797</td>
+                                        <td>6252215334573861</td>
+                                        <td>4436064890084913</td>
+                                        <td>2021-05-18 23:48:31</td>
+                                        <td>
+                                            <button class="btn btn-info btn-xs btnbspr space-btn
+                                                btn-action-production-gateway" data-url="./requestactiongateway" data-id="1578522797" data-stage="1"> 
+                                                <span class="fa-solid fa-pencil"></span>
+                                            </button>
+                                            
+                                             <button class="btn btn-primary btn-xs btnbspr space-btn
+                                                btn-action-production-gateway" data-url="./requestactiongateway" data-stage="3" data-id="1578522797">
+                                             <span class="fa-solid fa-lock"></span>
+                                            </button>
+                                            
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                 </table>
+                            </div>
+                            
+                            <!-- customers pagination -->
+                                <nav aria-label="Pagination">
+                                    <ul class="pagination justify-content-center font-weight-medium">
+                                        <li class="page-item disabled">
+                                            <a class="page-link svg-icon" href="./gatewayowners?page=1&amp;sort=registerDate,desc&amp;code=&amp;name=&amp;portalid=&amp;productionresourcekey=&amp;developmentresourcekey=&amp;contactnumber=&amp;category=" aria-label="Previous" title="Previous Page" rel="tooltip">
+                                                <span aria-hidden="true" data-feather="chevrons-left" width="20" height="20">First</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item disabled">
+                                            <a class="page-link svg-icon" href="./gatewayowners?page=1&amp;sort=registerDate,desc&amp;code=&amp;name=&amp;portalid=&amp;productionresourcekey=&amp;developmentresourcekey=&amp;contactnumber=&amp;category=" aria-label="Previous" title="Previous Page" rel="tooltip">
+                                                <span aria-hidden="true" data-feather="chevrons-left" width="20" height="20">Prev</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item active">
+                                            <a class="page-link" href="./gatewayowners?page=1&amp;sort=registerDate,desc&amp;code=&amp;name=&amp;portalid=&amp;productionresourcekey=&amp;developmentresourcekey=" title="Page 1" rel="tooltip">1</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="./gatewayowners?page=2&amp;sort=registerDate,desc&amp;code=&amp;name=&amp;portalid=&amp;productionresourcekey=&amp;developmentresourcekey=" title="Page 2" rel="tooltip">2</a>
+                                        </li>
+                                        
+                                        <li class="page-item">
+                                            <a class="page-link svg-icon" href="./gatewayowners?page=2&amp;sort=registerDate,desc&amp;code=&amp;name=&amp;portalid=&amp;productionresourcekey=&amp;developmentresourcekey=" aria-label="Next" title="Next Page" rel="tooltip">
+                                                <span aria-hidden="true" data-feather="chevrons-right" width="20" height="20">Next</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link svg-icon" href="./gatewayowners?page=2&amp;sort=registerDate,desc&amp;code=&amp;name=&amp;portalid=&amp;productionresourcekey=&amp;developmentresourcekey=&amp;contactnumber=&amp;category=" aria-label="Previous" title="Previous Page" rel="tooltip">
+                                                <span aria-hidden="true" data-feather="chevrons-left" width="20" height="20">Last</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                <!--    grid view end-->
+                           
+                <!--content end-->
+                        </div>
+            </div>
+          
+
+        </div>
+          </div>
+        </div>
+        </div>
+        </div>
+      </div>
+        </div>
+
+      </div></div>
+
+
+      </div>
+      <!-- content-wrapper ends -->
+      <script>
+
+        var popUpObj;
+    
+        function showModalPopUp(){
+    
+          window.alert("Payle Mall is not currently available!!!!!!!")
+    
+    
+        }
+    
+      </script>
+      <!-- partial:partials/_footer.html -->
+      <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+          <span class="text-muted text-center text-sm-left d-block d-sm-inline-block"> Premium <a
+              href="https://home.payleq8.com/" target="_blank">PayLe Kuwait</a></span>
+          <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © .<a
+              href="https://home.payleq8.com/" target="_blank">Payle 2021</a> </span>
+        </div>
+      </footer>
+      <!-- partial -->
+    </div>
+    <!-- main-panel ends -->
+  </div>
+  <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="../../vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="../../../../vendors/chart.js/Chart.min.js"></script>
+  <script src="../../vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="../../vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="../../js/dataTables.select.min.js"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="../../js/off-canvas.js"></script>
+  <script src="../../js/hoverable-collapse.js"></script>
+  <script src="../../js/template.js"></script>
+  <script src="../../js/settings.js"></script>
+  <script src="../../js/todolist.js"></script>
+  <script src="../../package.json"></script>
+  <script src="../../js/Chart.roundedBarCharts.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="../../js/dashboard.js"></script>
+  <script src="../../js/Chart.roundedBarCharts.js"></script>
+  <!-- End custom js for this page-->
+  <script src="../../js/chart.js"></script>
+</body>
+
+</html>

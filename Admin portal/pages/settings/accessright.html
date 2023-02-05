@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Access rights</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../../vendors/feather/feather.css">
+    <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../../vendors/font-awesome/css/all.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="../../vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="../../js/select.dataTables.min.css">
+    <link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="../../images/logo-4.png" />
+  </head>
+
+    <body>
+        <div class="container-scroller">
+            <!-- partial:partials/_navbar.html -->
+            <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                <a class="navbar-brand brand-logo mr-5" href="/index.html"><img src="/images/logo-4.png" class="mr-2"
+                    alt="logo" /></a>
+
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+                <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+                <span class="icon-menu"></span>
+                </button>
+
+                <ul class="navbar-nav navbar-nav-right">
+                <li class="nav-item dropdown">
+                    <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
+                    data-toggle="dropdown">
+                    <i class="icon-globe"></i>
+                    <span class="count"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                    aria-labelledby="notificationDropdown">
+                    <p class="mb-0 font-weight-normal float-left dropdown-header">Choose Prefered Language</p>
+                    <a class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                        <div class="preview-icon bg-dark">
+                            <i class="ti-world mx-0"></i>
+                        </div>
+                        </div>
+                        <div class="preview-item-content">
+                        <h6 class="preview-subject font-weight-normal">Arabic</h6>
+
+                        </div>
+                    </a>
+                    <a class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                        <div class="preview-icon bg-info">
+                            <i class="ti-world mx-0"></i>
+                        </div>
+                        </div>
+                        <div class="preview-item-content">
+                        <h6 class="preview-subject font-weight-normal">English</h6>
+
+                        </div>
+                    </a>
+
+                    </div>
+                </li>
+                <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="/images/faces/face28.jpg" alt="profile" />
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="/pages/profile.html">
+                <i class="ti-settings text-primary"></i>
+                Profile Settings
+              </a>
+              <a class="dropdown-item" href="/pages/forgotpassword.html">
+                <i class="ti-marker text-primary"></i>
+                Change Password
+              </a>
+              <a class="dropdown-item" href="/pages/newadmin.html">
+                <i class="ti-plus text-primary"></i>
+                Add new admin
+              </a>
+              <a class="dropdown-item" href="/pages/login.html">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
+
+            </div>
+          </li>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+                    data-toggle="offcanvas">
+                    <span class="icon-menu"></span>
+                </button>
+            </div>
+            </nav>
+            <!-- partial -->
+            <div class="container-fluid page-body-wrapper">
+
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.html">
+                    <i class="fa-solid fa-dashboard menu-icon"></i>
+                    <span class="menu-title">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  href="/pages/merchant/merchants.html" aria-expanded="false" aria-controls="ui-basic">
+                    <i class="fa fa-user-circle menu-icon"></i>
+                    <span class="menu-title"> Merchants</span>
+
+                    </a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#transaction" aria-expanded="false" aria-controls="transaction">
+                    <i class="fa-solid fa-circle-dollar-to-slot menu-icon"></i>
+                    <span class="menu-title">Transactions</span>
+                    <i class="menu-arrow"></i>
+                    </a>
+                    <div class="collapse" id="transaction">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item"><a class="nav-link" href="/pages/transactions/transaction.html">All Transactions</a></li>
+                    </ul>
+                    </div>
+
+                    <div class="collapse" id="transaction">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item"><a class="nav-link" href="/pages/transactions/summary.html">Summary</a></li>
+                    </ul>
+                    </div>
+                    <div class="collapse" id="transaction">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item"><a class="nav-link" href="/pages/transactions/incomplete.html">Incomplete</a></li>
+                    </ul>
+                    </div>
+                    <div class="collapse" id="transaction">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item"><a class="nav-link" href="/pages/transactions/vm.html">Visa Master</a></li>
+                    </ul>
+                    </div>
+                    <div class="collapse" id="transaction">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item"><a class="nav-link" href="/pages/transactions/completevm.html">Complete VM</a></li>
+                    </ul>
+                    </div>
+                    <div class="collapse" id="transaction">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item"><a class="nav-link" href="/pages/transactions/incompletevm.html">Incomplete VM</a></li>
+                    </ul>
+                    </div>
+                    <div class="collapse" id="transaction">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item"><a class="nav-link" href="/pages/transactions/wallet.html">Payle Wallet</a></li>
+                    </ul>
+                    </div>
+                    <div class="collapse" id="transaction">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item">
+                        <a class="nav-link" href="/pages/transactions/amex.html">Amex Transactions</a>
+                        </li>
+                    </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#withdraw" aria-expanded="false" aria-controls="withdraw">
+                    <i class="fa-solid fa-hand-holding-dollar menu-icon"></i>
+                    <span class="menu-title">Withdrawals</span>
+                    <i class="menu-arrow"></i>
+                    </a>
+                    <div class="collapse" id="withdraw">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item"><a class="nav-link" href="/pages/withdrawal/withdrawal.html">Summary</a></li>
+                    </ul>
+                    </div>
+                    <div class="collapse" id="withdraw">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item"><a class="nav-link" href="/pages/withdrawal/pendingwithdraw.html">Pending</a></li>
+                    </ul>
+                    </div>
+                    <div class="collapse" id="withdraw">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item"><a class="nav-link" href="/pages/withdrawal/rejectedwithdraw.html">Rejected</a></li>
+                    </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  href="/pages/debit.html" aria-expanded="false" aria-controls="tables">
+                    <i class="ti-credit-card menu-icon"></i>
+                    <span class="menu-title">Debit/Credit</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  href="/pages/balance.html" aria-expanded="false" aria-controls="tables">
+                    <i class="fa fa-balance-scale menu-icon"></i>
+                    <span class="menu-title">System Balance</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  href="/pages/message.html" aria-expanded="false" aria-controls="tables">
+                    <i class="fa fa-comments menu-icon"></i>
+                    <span class="menu-title">Messsage</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  href="/pages/FTF.html" aria-expanded="false" aria-controls="tables">
+                    <i class="fa fa-archive menu-icon"></i>
+                    <span class="menu-title">FTF Files</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  href="/pages/reports.html" aria-expanded="false" aria-controls="tables">
+                    <i class="fa fa-file menu-icon"></i>
+                    <span class="menu-title">Reports</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  href="/pages/invoice.html" aria-expanded="false" aria-controls="tables">
+                    <i class="fa fa-receipt menu-icon"></i>
+                    <span class="menu-title">Invoices</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  href="/pages/graphs.html" aria-expanded="false" aria-controls="tables">
+                    <i class="fa fa-line-chart menu-icon"></i>
+                    <span class="menu-title">Graphs</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/gateway.html" aria-expanded="false" aria-controls="tables">
+                    <i class="fa fa-users menu-icon"></i>
+                    <span class="menu-title">Gateway Owners</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  href="/pages/certificate.html" aria-expanded="false" aria-controls="auth">
+                    <i class="fa fa-bank menu-icon"></i>
+                    <span class="menu-title">Bank Certificates</span>
+                    </a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  href="/pages/gallery.html" aria-expanded="false" aria-controls="error">
+                    <i class="fa fa-camera menu-icon"></i>
+                    <span class="menu-title">Gallery</span>
+
+                    </a>
+                </li>
+                <li class="nav-item" id="btn-goto-mall">
+                    <a class="nav-link" href="#" onclick="showModalPopUp()">
+                    <i class="fa fa-shopping-cart menu-icon"></i>
+                    <span class="menu-title">Payle Mall</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/rental.html">
+                    <i class="fa fa-asterisk menu-icon"></i>
+                    <span class="menu-title">Rental</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/settings/settings.html">
+                    <i class="fa fa-gear menu-icon"></i>
+                    <span class="menu-title">Settings</span>
+                    </a>
+                </li>
+
+
+
+
+                </ul>
+            </nav>
+            <!-- partial -->
+            <div class="main-panel">
+                    <div class="content-wrapper">
+                            
+                        <div>
+                            <div class="heading-line2">
+                                <label>Access rights</label>
+                                    
+                                <div class="clearfix"></div>
+                            </div><a style="float:right" href="/pages/settings/settings.html">Go back to Settings</a>
+                               
+                            
+                            <!--    search here-->
+                                
+                            <!--    search end-->
+                            
+                                    <div class="clearfix"></div>
+                            
+                        
+                            <!--    grid view here-->
+                            <div>
+                                <input type="hidden" id="selectedusertype" name="selectedusertype" value="4">
+                                <input type="hidden" id="selectedaccessright" name="selectedaccessright" value="5">
+                                 
+                                 <div class="row">
+                                     <div class="col-sm-6">
+                                         <div class="setle-line">
+                                            <select class="form-control" required="required" name="accessright_usertype" id="accessright_usertype">
+                                                <option value="4">Limited User</option>
+                                                <option value="5">Accountant </option>
+                                                <option value="6">Call center</option>
+                                                <option value="9">Test User</option>
+                                                <option value="10">Front Desk</option>
+                                                <option value="11">anon</option>
+                                                <option value="12">tester</option>
+                                              </select>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div class="row func-tab-list">
+                                     <div class="col-sm-2">
+                                         <ul class="nav nav-pills nav-stacked " style="flex-direction:column;">
+                                             <li class="active">
+                                             <a data-toggle="tab" href="#" data-id="5" class="href_accesslink ">Merchants</a></li>
+                                             <li>
+                                             <a data-toggle="tab" href="#" data-id="15" class="href_accesslink ">Transactions</a></li>
+                                             <li>
+                                             <a data-toggle="tab" href="#" data-id="29" class="href_accesslink ">Withdrawals</a></li>
+                                             <li>
+                                             <a data-toggle="tab" href="#" data-id="39" class="href_accesslink ">Visa Master Transactions</a></li>
+                                             <li>
+                                             <a data-toggle="tab" href="#" data-id="64" class="href_accesslink ">Incomplete Transactions</a></li>
+                                             <li>
+                                             <a data-toggle="tab" href="#" data-id="86" class="href_accesslink ">Pending withdrawals</a></li>
+                                             <li>
+                                             <a data-toggle="tab" href="#" data-id="102" class="href_accesslink ">Transaction Summary</a></li>
+                                             <li>
+                                             <a data-toggle="tab" href="#" data-id="129" class="href_accesslink ">Payle wallet</a></li>
+                                             <li>
+                                             <a data-toggle="tab" href="#" data-id="138" class="href_accesslink ">Rejected withdrawals</a></li>
+                                             <li>
+                                             <a data-toggle="tab" href="#" data-id="95" class="href_accesslink ">Debit/Credit</a></li>
+                                             <li>
+                                             <a data-toggle="tab" href="#" data-id="89" class="href_accesslink ">Message</a></li>
+                                             <li>
+                                             <a data-toggle="tab" href="#" data-id="28" class="href_accesslink ">Merchant's cashbook</a></li>
+                                             <li>
+                                             <a data-toggle="tab" href="#" data-id="106" class="href_accesslink ">Incomplete VM</a></li>
+                                             <li>
+                                             <a data-toggle="tab" href="#" data-id="107" class="href_accesslink ">Complete VM</a></li>
+                                             <li>
+                                             <a data-toggle="tab" href="#" data-id="137" class="href_accesslink ">Amex transactions</a></li>
+                                             <li>
+                                             <a data-toggle="tab" href="#" data-id="194" class="href_accesslink ">Merchant's documents</a></li>
+                                             <li>
+                                             <a data-toggle="tab" href="#" data-id="208" class="href_accesslink ">Report</a></li>
+                                             <li>
+                                             <a data-toggle="tab" href="#" data-id="220" class="href_accesslink ">KYC</a></li>
+                                             <li>
+                                             <a data-toggle="tab" href="#" data-id="231" class="href_accesslink ">gateway owners</a></li>
+                                             <li>
+                                             <a data-toggle="tab" href="#" data-id="259" class="href_accesslink ">Mall</a></li>
+                                             <li>
+                                             <a data-toggle="tab" href="#" data-id="260" class="href_accesslink ">Rental</a></li>
+                                             <li>
+                                             <a data-toggle="tab" href="#" data-id="282" class="href_accesslink ">Bank Certificates</a></li>
+                                         </ul>
+                                     </div>
+                                     <div class="col-sm-10">
+                                         <div class="tab-content">
+                                             <div id="accessright_bodycontent">
+                     
+                         <title></title>
+                         <script>
+                             /*<![CDATA[*/
+                            $("input[type='checkbox']").click(function () {
+                     
+                     var box = $(this);
+                     var status = 1;
+                 
+                     // $this will contain a reference to the checkbox   
+                     if (box.is(':checked')) {
+                         status = 1;
+                     }else{
+                         status = 0;
+                     }
+                     var accessrightid = box.attr('data-id');
+                     var usertypeid = $( "input[type=hidden][name=selectedusertype]" ).val();
+                     var bodyFormData = new FormData();
+                     bodyFormData.set('userTypeId', usertypeid);
+                     bodyFormData.set('accessRightId', accessrightid);
+                     bodyFormData.set('activeStatus', status);
+                      
+                      axios.post('./requestupdateusertypeaccessright', bodyFormData)
+                        .then(function (response) {
+                 
+                         if (response.data.validated) {
+                              box.prop( "checked", (status==1)? true :false );
+                               swal(confirmtext, {icon: "success"});
+                            } else {
+                                $.each(response.data.errorSetMessages, function (key, value) {
+                                    $('input[name=' + key + ']').after('<span class="error">' + value + '</span>');
+                 
+                                });
+                 
+                            }
+                 
+                        })
+                        .catch(function (error) {
+                          // handle error
+                          console.log(error);
+                        })
+                        .finally(function () {
+                 
+                        });
+                  event.preventDefault();
+                     
+                 });
+                             /*]]>*/
+                         </script>
+                     
+                     
+                         <div id="usertype_accesstype" class="tab-pane fade in active">
+                             <div class="active-check">
+                                 <div>
+                                     <input type="checkbox" class="accessright_incontent" data-id="5" value="5">
+                                 <span>Active</span>
+                                 </div>
+                             </div>
+                             <div class="func-header">
+                                 <span>Function</span></div>
+                             <div class="inside-function-panel">
+                                 <label>
+                                     <input type="checkbox" value="6" class="accessright_incontent" data-id="6" checked="checked"> 
+                                      <span>Search</span>
+                                 </label><label>
+                                     <input type="checkbox" value="254" class="accessright_incontent" data-id="254" checked="checked"> 
+                                      <span>Latest Merchant </span>
+                                 </label><label>
+                                     <input type="checkbox" value="255" class="accessright_incontent" data-id="255" checked="checked"> 
+                                      <span>Withdrawal Request</span>
+                                 </label><label>
+                                     <input type="checkbox" value="256" class="accessright_incontent" data-id="256" checked="checked"> 
+                                      <span>Profile Update</span>
+                                 </label><label>
+                                     <input type="checkbox" value="257" class="accessright_incontent" data-id="257" checked="checked"> 
+                                      <span>Profile &amp; Withdrawal</span>
+                                 </label>
+                             </div>
+                              <div class="func-header">
+                                  <span>In grid</span></div>
+                              <div class="inside-function-panel">
+                                  <label>
+                                     <input type="checkbox" value="7" class="accessright_incontent" data-id="7" checked="checked"> 
+                                      <span>Merchant code</span>
+                                 </label><label>
+                                     <input type="checkbox" value="8" class="accessright_incontent" data-id="8" checked="checked"> 
+                                      <span>Email</span>
+                                 </label><label>
+                                     <input type="checkbox" value="9" class="accessright_incontent" data-id="9" checked="checked"> 
+                                      <span>Civil id</span>
+                                 </label><label>
+                                     <input type="checkbox" value="10" class="accessright_incontent" data-id="10" checked="checked"> 
+                                      <span>Merchant name</span>
+                                 </label><label>
+                                     <input type="checkbox" value="11" class="accessright_incontent" data-id="11" checked="checked"> 
+                                      <span>Business name</span>
+                                 </label><label>
+                                     <input type="checkbox" value="12" class="accessright_incontent" data-id="12" checked="checked"> 
+                                      <span># of logins</span>
+                                 </label><label>
+                                     <input type="checkbox" value="13" class="accessright_incontent" data-id="13" checked="checked"> 
+                                      <span>Contact no</span>
+                                 </label><label>
+                                     <input type="checkbox" value="230" class="accessright_incontent" data-id="230" checked="checked"> 
+                                      <span>Select</span>
+                                 </label>
+                              </div>
+                         </div>
+                     
+                 
+                 
+                 
+                 
+                 </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                            <!--    grid view end-->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <!-- content-wrapper ends -->
+            <script>
+
+                var popUpObj;
+            
+                function showModalPopUp(){
+            
+                window.alert("Payle Mall is not currently available!!!!!!!")
+            
+            
+                }
+        
+            </script>
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block"> Premium <a
+                href="https://home.payleq8.com/" target="_blank">PayLe Kuwait</a></span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © .<a
+                href="https://home.payleq8.com/" target="_blank">Payle 2021</a> </span>
+            </div>
+        </footer>
+        <!-- partial -->
+        
+        <!-- plugins:js -->
+        <script src="../../vendors/js/vendor.bundle.base.js"></script>
+        <!-- endinject -->
+        <!-- Plugin js for this page -->
+        <script src="../../../../vendors/chart.js/Chart.min.js"></script>
+        <script src="../../vendors/datatables.net/jquery.dataTables.js"></script>
+        <script src="../../vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+        <script src="../../js/dataTables.select.min.js"></script>
+
+        <!-- End plugin js for this page -->
+        <!-- inject:js -->
+        <script src="../../js/off-canvas.js"></script>
+        <script src="../../js/hoverable-collapse.js"></script>
+        <script src="../../js/template.js"></script>
+        <script src="../../js/settings.js"></script>
+        <script src="../../js/todolist.js"></script>
+        <script src="../../package.json"></script>
+        <script src="../../js/Chart.roundedBarCharts.js"></script>
+        <!-- endinject -->
+        <!-- Custom js for this page-->
+        <script src="../../js/dashboard.js"></script>
+        <script src="../../js/Chart.roundedBarCharts.js"></script>
+        <!-- End custom js for this page-->
+        <script src="../../js/chart.js"></script>
+        <script>
+            $('.dropdown-toggle').dropdown();
+        </script>
+        <script> InitProgressBar();</script>
+        <div id="ProgressBarContainer"><div class="modal fade" id="loading1" data-rms="" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:100%"><div class="progress progress-striped active" style="margin: 25% auto;width:100%; max-width:400px;"><div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%;"></div></div></div></div>
+        <divcursor id="divCursor" class="" style="position: absolute; border: none; padding: 3px; border-radius: 2px; background-color: rgba(0, 0, 0, 0.8); color: white; font-family: Arial; font-size: 12pt; font-style: normal; z-index: 999; left: 933px; top: 730px; display: none;">Active merchants:42105 (96.9 %)</divcursor>
+    </body>
+
+</html>

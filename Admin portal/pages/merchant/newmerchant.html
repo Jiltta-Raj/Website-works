@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>New Merchant</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="/vendors/feather/feather.css">
+    <link rel="stylesheet" href="/vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="/vendors/font-awesome/css/all.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="/vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="/js/select.dataTables.min.css">
+    <link rel="stylesheet" href="/vendors/mdi/css/materialdesignicons.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/css/vertical-layout-light/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="/images/logo-4.png" />
+  </head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="/index.html"><img src="/images/logo-4.png" class="mr-2"
+            alt="logo" /></a>
+
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
+              data-toggle="dropdown">
+              <i class="icon-globe"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+              aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Choose Prefered Language</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-dark">
+                    <i class="ti-world mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Arabic</h6>
+
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="ti-world mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">English</h6>
+
+                </div>
+              </a>
+
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="/images/faces/face28.jpg" alt="profile" />
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="/pages/profile.html">
+                <i class="ti-settings text-primary"></i>
+                Profile Settings
+              </a>
+              <a class="dropdown-item" href="/pages/forgotpassword.html">
+                <i class="ti-marker text-primary"></i>
+                Change Password
+              </a>
+              <a class="dropdown-item" href="/pages/newadmin.html">
+                <i class="ti-plus text-primary"></i>
+                Add new admin
+              </a>
+              <a class="dropdown-item" href="/pages/login.html">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
+
+            </div>
+          </li>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+            data-toggle="offcanvas">
+            <span class="icon-menu"></span>
+          </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">
+              <i class="fa-solid fa-dashboard menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/merchant/merchants.html" aria-expanded="false" aria-controls="ui-basic">
+              <i class="fa fa-user-circle menu-icon"></i>
+              <span class="menu-title"> Merchants</span>
+
+            </a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#transaction" aria-expanded="false" aria-controls="transaction">
+              <i class="fa-solid fa-circle-dollar-to-slot menu-icon"></i>
+              <span class="menu-title">Transactions</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/transaction.html">All Transactions</a></li>
+              </ul>
+            </div>
+
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/summary.html">Summary</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/incomplete.html">Incomplete</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/vm.html">Visa Master</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/completevm.html">Complete VM</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/incompletevm.html">Incomplete VM</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/wallet.html">Payle Wallet</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="/pages/transactions/amex.html">Amex Transactions</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#withdraw" aria-expanded="false" aria-controls="withdraw">
+              <i class="fa-solid fa-hand-holding-dollar menu-icon"></i>
+              <span class="menu-title">Withdrawals</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="withdraw">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/withdrawal/withdrawal.html">Summary</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="withdraw">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/withdrawal/pendingwithdraw.html">Pending</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="withdraw">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/withdrawal/rejectedwithdraw.html">Rejected</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/debit.html" aria-expanded="false" aria-controls="tables">
+              <i class="ti-credit-card menu-icon"></i>
+              <span class="menu-title">Debit/Credit</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/balance.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-balance-scale menu-icon"></i>
+              <span class="menu-title">System Balance</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/message.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-comments menu-icon"></i>
+              <span class="menu-title">Messsage</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/FTF.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-archive menu-icon"></i>
+              <span class="menu-title">FTF Files</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/reports.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-file menu-icon"></i>
+              <span class="menu-title">Reports</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/invoice.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-receipt menu-icon"></i>
+              <span class="menu-title">Invoices</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/graphs.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-line-chart menu-icon"></i>
+              <span class="menu-title">Graphs</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/gateway.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-users menu-icon"></i>
+              <span class="menu-title">Gateway Owners</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/certificate.html" aria-expanded="false" aria-controls="auth">
+              <i class="fa fa-bank menu-icon"></i>
+              <span class="menu-title">Bank Certificates</span>
+            </a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/gallery.html" aria-expanded="false" aria-controls="error">
+              <i class="fa fa-camera menu-icon"></i>
+              <span class="menu-title">Gallery</span>
+
+            </a>
+          </li>
+          <li class="nav-item" id="btn-goto-mall">
+            <a class="nav-link" href="#" onclick="showModalPopUp()">
+              <i class="fa fa-shopping-cart menu-icon"></i>
+              <span class="menu-title">Payle Mall</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/rental.html">
+              <i class="fa fa-asterisk menu-icon"></i>
+              <span class="menu-title">Rental</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/settings/settings.html">
+              <i class="fa fa-gear menu-icon"></i>
+              <span class="menu-title">Settings</span>
+            </a>
+          </li>
+
+
+
+
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-12 grid-margin">
+              <div class="row">
+                <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                  <h3 class="font-weight-bold">New Merchant Registration</h3>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="heading-line2">
+            <span>Personal Details</span>
+
+
+            <div class="clearfix"></div>
+        </div>
+          <div class="row">
+            
+
+            <div class="col-md-6 grid-margin transparent">
+                <form id="signinRequestForm" action="./register" method="POST">
+                    <div class="col-sm-4 re-p-1">
+    
+    
+                        <div class="form-group">
+                            <span>First name</span><span class="error-message">*</span>
+                            <input maxlength="90" class="form-control" type="text" name="firstName" value="" id="firstName">
+                            
+                        </div>
+    
+                        <div class="form-group">
+                            <span>Middle name</span>
+                            <input maxlength="90" class="form-control" type="text" name="middelName" value="" id="middelName">
+                            
+                        </div>
+                        <div class="form-group">
+                            <span>Last name</span><span class="error-message">*</span>
+                            <input maxlength="90" class="form-control" type="text" name="lastName" value="" id="lastName">
+                            
+                        </div>
+                        <div class="form-group">
+                            <span>Business name</span><span class="error-message">*</span>
+                            <input maxlength="190" class="form-control" type="text" name="businessName" value="" id="businessName">
+                                
+                        </div>
+                        <div class="form-group">
+                            <span>Address </span>
+                            <input maxlength="200" class="form-control" type="text" name="address" value="" id="address">
+                            
+                        </div>
+    <!--                    <div class="form-group">
+                            <span th:utext="#{text.cidnumber}"></span>
+                            <input maxlength="200" class="form-control" th:field="*{cidNumber}" type="text" name="cidnumber" value=""/>
+                            <div th:if="${#fields.hasErrors('cidNumber')}" th:errors="*{cidNumber}" class="error-message"></div>
+                        </div>-->
+                    </div>
+    
+                    <div class="col-sm-4 re-p-2">
+    
+                        <div class="form-group">
+                            <span>Contact no</span><span class="error-message">*</span>
+                            <input class="form-control" maxlength="25" type="text" name="contactNumber" value="" id="contactNumber">
+                            
+                        </div>
+                        <div class="form-group">
+                            <span>Date of birth</span>
+                            <input class="form-control" id="datepicker" type="text" name="dateOfBirth" value="" onfocus="(this.type='date')" onblur="(this.type='text')">
+                            
+                        </div>
+    
+                        <div class="form-group">
+                            <span>Email</span><span class="error-message">*</span>
+                            <input maxlength="48" class="form-control" type="text" name="email" value="" id="email">
+                            
+                        </div>
+    
+                        <div class="form-group">
+                            <span>Facebook link</span>
+                            <input maxlength="90" class="form-control" type="text" name="facebookLink" value="" id="facebookLink">
+                            
+                        </div>
+    
+                        <div class="form-group">
+                            <span>Instagram link</span>
+                            <input maxlength="90" class="form-control" type="text" name="instagramLink" value="" id="instagramLink">
+                            
+                        </div>
+    <!--                    <div class="form-group">
+                            <span th:utext="#{text.nationality}"></span>
+                            <input maxlength="190" class="form-control" th:field="*{nationality}"  type="text" name="nationality" value=""/>
+                            <div th:if="${#fields.hasErrors('nationality')}" th:errors="*{nationality}" class="error-message"></div>
+                        </div>-->
+    
+    
+                    </div>
+                    <div class="col-sm-4 re-p-3 bg-merun">
+                        <h3 class="head-type-1">Bank account detail</h3>
+                        <div class="form-group">
+                            <span>Bank name</span>
+                            <select name="bankId" id="bankId" class="form-control">
+                                <option value="1">Al Ahli Bank of Kuwait (ABK)</option>
+                                <option value="3">Ahli United Bank [AUB]</option>
+                                <option value="4">Bank of Bahrain &amp; Kuwait [BBK]</option>
+                                <option value="5">Boubyan Bank [Boubyan]</option>
+                                <option value="6">Burgan Bank [Burgan]</option>
+                                <option value="7">Commercial Bank of Kuwait [CBK]</option>
+                                <option value="8">Doha Bank [Doha]</option>
+                                <option value="9">Gulf Bank of Kuwait [GBK]</option>
+                                <option value="10">Kuwait Finance House [KFH]</option>
+                                <option value="11">Kuwait International Bank[KIB]</option>
+                                <option value="12">Mashreq Bank [Mashreq]</option>
+                                <option value="13">National Bank of Kuwait[NBK]</option>
+                                <option value="14">National Bank of Abu Dhabi [NBAD]</option>
+                                <option value="15">Qatar National Bank [QNB]</option>
+                                <option value="16">Al Rajhi Bank [Rajhi]</option>
+                                <option value="17">Union National Bank [UNB]</option>
+                                <option value="18">Warba Bank [WARBA]</option>
+    
+    
+                            </select>
+    
+                            <div class="error-message"></div>
+    
+                            <br>
+                                <div class="form-group">
+                                    <span>Account no</span>
+                                    <input maxlength="39" class="form-control" type="text" name="accountNumber" value="" id="accountNumber">
+    
+                                    
+                                </div>
+                        </div>
+                        <h3 class="head-type-1">Merchant Type</h3>
+                        <div class="form-group">
+                            <select name="merchantType" id="merchantType" class="form-control">
+                                <option value="personal">Personal</option>
+                                <option value="cooperate">Cooperate</option>
+                            </select>
+                            <br>
+                                <div id="commercialregistrationidDiv" class="form-group" style="display: none;">
+                                    <span>Commercial registration id</span><span class="error-message">*</span>
+                                    <input maxlength="39" class="form-control" type="text" name="commercialRegId" value="" id="commercialRegId">
+                                </div>
+                                
+                        </div>
+                    </div>
+                    <button type="submit" name="" class="btn btn-success  btn-right-controle f-r">Submit</button> 
+                </form>
+            </div>
+          </div>
+
+        </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+      <!-- content-wrapper ends -->
+      <script>
+
+        var popUpObj;
+    
+        function showModalPopUp(){
+    
+          window.alert("Payle Mall is not currently available!!!!!!!")
+    
+    
+        }
+    
+      </script>
+      <!-- partial:partials/_footer.html -->
+      <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+          <span class="text-muted text-center text-sm-left d-block d-sm-inline-block"> Premium <a
+              href="https://home.payleq8.com/" target="_blank">PayLe Kuwait</a></span>
+          <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © .<a
+              href="https://home.payleq8.com/" target="_blank">Payle 2021</a> </span>
+        </div>
+      </footer>
+      <!-- partial -->
+    </div>
+    <!-- main-panel ends -->
+  </div>
+  <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  !-- plugins:js -->
+  <script src="../../vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="../../../../vendors/chart.js/Chart.min.js"></script>
+  <script src="../../vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="../../vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="../../js/dataTables.select.min.js"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="../../js/off-canvas.js"></script>
+  <script src="../../js/hoverable-collapse.js"></script>
+  <script src="../../js/template.js"></script>
+  <script src="../../js/settings.js"></script>
+  <script src="../../js/todolist.js"></script>
+  <script src="../../package.json"></script>
+  <script src="../../js/Chart.roundedBarCharts.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="../../js/dashboard.js"></script>
+  <script src="../../js/Chart.roundedBarCharts.js"></script>
+  <!-- End custom js for this page-->
+  <script src="../../js/chart.js"></script>
+  </body>
+
+</html>

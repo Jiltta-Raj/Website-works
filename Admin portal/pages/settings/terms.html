@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Terms</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../../vendors/feather/feather.css">
+    <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../../vendors/font-awesome/css/all.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="../../vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="../../js/select.dataTables.min.css">
+    <link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="../../images/logo-4.png" />
+    <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script>
+  </head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="/index.html"><img src="/images/logo-4.png" class="mr-2"
+            alt="logo" /></a>
+
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
+              data-toggle="dropdown">
+              <i class="icon-globe"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+              aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Choose Prefered Language</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-dark">
+                    <i class="ti-world mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Arabic</h6>
+
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="ti-world mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">English</h6>
+
+                </div>
+              </a>
+
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="/images/faces/face28.jpg" alt="profile" />
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="/pages/profile.html">
+                <i class="ti-settings text-primary"></i>
+                Profile Settings
+              </a>
+              <a class="dropdown-item" href="/pages/forgotpassword.html">
+                <i class="ti-marker text-primary"></i>
+                Change Password
+              </a>
+              <a class="dropdown-item" href="/pages/newadmin.html">
+                <i class="ti-plus text-primary"></i>
+                Add new admin
+              </a>
+              <a class="dropdown-item" href="/pages/login.html">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
+
+            </div>
+          </li>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+            data-toggle="offcanvas">
+            <span class="icon-menu"></span>
+          </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">
+              <i class="fa-solid fa-dashboard menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/merchant/merchants.html" aria-expanded="false" aria-controls="ui-basic">
+              <i class="fa fa-user-circle menu-icon"></i>
+              <span class="menu-title"> Merchants</span>
+
+            </a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#transaction" aria-expanded="false" aria-controls="transaction">
+              <i class="fa-solid fa-circle-dollar-to-slot menu-icon"></i>
+              <span class="menu-title">Transactions</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/transaction.html">All Transactions</a></li>
+              </ul>
+            </div>
+
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/summary.html">Summary</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/incomplete.html">Incomplete</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/vm.html">Visa Master</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/completevm.html">Complete VM</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/incompletevm.html">Incomplete VM</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/wallet.html">Payle Wallet</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="/pages/transactions/amex.html">Amex Transactions</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#withdraw" aria-expanded="false" aria-controls="withdraw">
+              <i class="fa-solid fa-hand-holding-dollar menu-icon"></i>
+              <span class="menu-title">Withdrawals</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="withdraw">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/withdrawal/withdrawal.html">Summary</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="withdraw">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/withdrawal/pendingwithdraw.html">Pending</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="withdraw">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/withdrawal/rejectedwithdraw.html">Rejected</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/debit.html" aria-expanded="false" aria-controls="tables">
+              <i class="ti-credit-card menu-icon"></i>
+              <span class="menu-title">Debit/Credit</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/balance.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-balance-scale menu-icon"></i>
+              <span class="menu-title">System Balance</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/message.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-comments menu-icon"></i>
+              <span class="menu-title">Messsage</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/FTF.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-archive menu-icon"></i>
+              <span class="menu-title">FTF Files</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/reports.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-file menu-icon"></i>
+              <span class="menu-title">Reports</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/invoice.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-receipt menu-icon"></i>
+              <span class="menu-title">Invoices</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/graphs.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-line-chart menu-icon"></i>
+              <span class="menu-title">Graphs</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/gateway.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-users menu-icon"></i>
+              <span class="menu-title">Gateway Owners</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/certificate.html" aria-expanded="false" aria-controls="auth">
+              <i class="fa fa-bank menu-icon"></i>
+              <span class="menu-title">Bank Certificates</span>
+            </a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/gallery.html" aria-expanded="false" aria-controls="error">
+              <i class="fa fa-camera menu-icon"></i>
+              <span class="menu-title">Gallery</span>
+
+            </a>
+          </li>
+          <li class="nav-item" id="btn-goto-mall">
+            <a class="nav-link" href="#" onclick="showModalPopUp()">
+              <i class="fa fa-shopping-cart menu-icon"></i>
+              <span class="menu-title">Payle Mall</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/rental.html">
+              <i class="fa fa-asterisk menu-icon"></i>
+              <span class="menu-title">Rental</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/settings/settings.html">
+              <i class="fa fa-gear menu-icon"></i>
+              <span class="menu-title">Settings</span>
+            </a>
+          </li>
+
+
+
+
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+            
+              
+                
+            <div>
+                <div class="heading-line2">
+                    <label>Terms & Conditions</label>
+                       
+                    <div class="clearfix"></div>
+                </div>
+                      <a style="float:right" href="/pages/settings/settings.html">Go back to Settings</a>
+
+                      <form id="merchantCommentUpdateForm" 
+                      action="./updateinformationcontent?title=termsandconditions" 
+                      method="POST" >
+            <div  class="row" >
+               <div class="component-mail-textarea" style="text-align:right;height: 100%;resize:vertical">
+                    <textarea class="form-control" id="editor"style="height: 100%;resize:vertical; text-align:right;overflow-y: scroll;" name="content" >
+                        &lt;p style=&quot;text-align: right;&quot;&gt;Terms and Conditions&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt;&lt;u&gt;الشروط والأحكام&lt;/u&gt;&lt;/strong&gt;&lt;u&gt;&lt;/u&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt;&lt;u&gt;لإستخدام التطبيق الألكتروني&lt;/u&gt;&lt;/strong&gt;&lt;strong&gt;&lt;u&gt; &lt;/u&gt;&lt;/strong&gt;&lt;strong&gt;&lt;u&gt;لشركة / بيلي &lt;/u&gt;&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt;من المعلوم أن هذه الشروط والأحكام تنطبق عند إستخدام أيِّ زائر للتطبيق الألكتروني ، وعند إستخدام ذلك التطبيق فهو بمثابة مُوافَقَة صريحة وضمنية على الإلتزام بهذه الشروط والأحكام ، مع مُراعاة إلتِزام جميع الأطراف بما فيها مُزوِّد الخدمة والمُستَخدِم والمُشارَكَة بكافَّة أحكام وقواعد ومبادِئ القوانين التالية :&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;القانون رقم 32 لسنة 1968 في شأن النَقْد وبنك الكويت المركزي وتنظيم المِهَن المصرِفيّة وأيَّة قوانين أُخري أو تعليمات تكون صادرة في هذا الشأن .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;القانون رقم 106 لسنة 2013 في شأن مُكافحة غَسل الأموال وتمويل الإرهاب . &lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;القانون رقم 20 لسنة 2014 في شأن المعاملات الإلكترونية . &lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;القانون رقم &lt;/strong&gt;&lt;strong&gt;63&lt;/strong&gt;&lt;strong&gt; لسنة &lt;/strong&gt;&lt;strong&gt;2015&lt;/strong&gt;&lt;strong&gt; في شأن جرائم تقنية المعلومات .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;وأيِّ قانون آخر يُنظِّم النشاط محلّ التطبيق .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;أولاً : الأحكام العامة :&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;يحتَفِظ هذا التطبيق بحقِّه في تغيير الشروط والأحكام من وقتٍ لآخر .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;لا يُشترط علينا الإتصال بك بأيِّ وسيلةٍ من وسائل الإتصال أو إعلامِكَ بأيِّ تغييرات تم إضافتها أو حذفها من الشروط والأحكام ، ومن مسئولية المستَخدِم الإطّلاع على التحديثات والإحاطة بمضمونها وتعديلاتها دورياً .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;مُجرَّد إستخدامك الدائم لهذا التطبيق يُعَدُّ بمثابة مُوافَقَة على الشروط الأحكام المُطبَّقة أو أيَّة شروط في أيِّ جُزءٍ آخر من التطبيق أو الموقع .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;ثانياً : تعريفات بشأن الألفاظ الدارجة :&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;&quot; أنت &quot; تُشير إلى مُستخدمي التطبيق .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;&quot; نحن &quot; تُشير إلى المُنشأة مالِكَة التطبيق (الشركة) .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;&quot; معلومات المُستخدِم &quot; تُشير إلى البيانات الشخصية لمُستخدمي التطبيق .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;&quot; التطبيق الالكتروني &quot; تُشير إلى التطبيق (البرنامج) والنظام الإلكتروني المستَخدَم سواءً على الهاتف المحمول أو الحاسب الآلي أو أيِّ جهاز تِقَني حديث والمستَخدَم على شبكة المعلومات العالمية عبر العالم .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;&quot; المُحتوى &quot; تُشير إلى أيَّة إقتراحات أو مُراجَعات أو تعليقات والتي هي من حقوق المُستخدِم .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;&quot; البيانات الإلكترونية &quot; بيانات ذات خصائص إلكترونية في شكلِ نُصوصٍ أو رموزٍ أو أصواتٍ أو رسومٍ أو صُوَرٍ أو بَرامِج حاسِب آلي أو قواعد للبيانات .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;&quot; الشبكة المعلوماتية &quot; إرتِباط بين أكثر من منظومة إتصالات لتقنية المعلومات للحُصول على المعلومات وتبادلها .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;&quot; المستند أو السِجلّ الإلكتروني &quot; مجموعة بيانات أو معلومات يتم إنشاؤها أو تخزينها أو إستخراجها أو نَسخها أو إرسالها أو إبلاغها أو إستقبالها كُلِّياً أو جُزئياً بوسيلة إلكترونية ، على وسيط مَلموس أو على أيِّ وسيطٍ إلكترونيٍّ آخر، وتكون قابلة للإسترجاع بشكل يُمكن فهمه .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;&quot; الموقِع &quot;: مكان إتاحة المعلومات على الشبكة المعلوماتية من خلال عنوان مُحدَّد .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;&quot; إلكتروني &quot; كُلّ ما يَتَّصِل بتكنولوجيا المعلومات وذو قُدرات كهربائية أو رقمية أو مغناطيسية أو بَصَريَّة أو كهرومغناطيسية أو وسائل أُخرى مُشابهَة سِلكيَّة كانت أو لاسِلكيَّة وما قد يُستَحدَث من تقنيات في هذا المجال .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;&quot; وسيلة تقنية المعلومات &quot; أداة إلكترونية تَشمَل كُلَّ ما يَتَّصِل بتكنولوجيا المعلومات وذو قُدرات كهربائية أو رقمية أو مغناطيسية أو بصرية أو كهرومغناطيسية أو ضوئية أو وسائل أُخرى مُشابهة سِلكيَّة كانت أو لاسِلكيَّة وما قد يُستَحدَث منها في هذا المجال .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;&quot; الجريمة المعلوماتية &quot; كُلُّ فِعلٍ يُرتَكَب من خلال إستخدام الحاسِب الآلي أو الشبَكَة المعلوماتية أو غير ذلك من وسائل تقنية المعلومات بالمخالفة لأحكام القانون .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;ثالثاً : شروط الإستخدام للتطبيق :&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;يُشتَرَط في المُستَخدِم أن يَتَمتَّع بالأهلية القانونية ولا يَقِلُّ عُمْرُ المُستَخدِم عن 21 عام وألاّ يكون لديه عارِض من عوارِض الأهلية ، وفي حالَة مُشارَكة ما دون ذلك (18 سنة) يكون الوليّ أو النائِب أو الوَصِيِّ مسئولاً مسئولية كاملة عن كافَّة الشروط والأحكام المذكورة والخاصَّة بهذا التطبيق .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;يُقِرَّ المستَخدِم بأن لديه الأهلية القانونية التي تُخوِّله إبرام أيِّ تَصَرُّف عبر التطبيق الإلكتروني .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;يَلتَزم المُستَخدِم بكافَّة القواعد المُحدَّدة التي تنطَبِق على أيِّ خدمة من الخدمات التي يُؤدّيها التطبيق للمُستَخدِم عن طريق شركات مُزوِّدي الخِدمَة أيِّ شخص سواءً كان شخصاً طبيعياً أو إعتبارياً .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;رابعاً : الشروط والأحكام :&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;لا يجوز لأيِّ مُستَخدِم نَسْخ أو تحميل أو نَشر أو مُحاوَلة تقديم أيِّ خِدمَة من الخدمات التي يُؤدّيها التطبيق لكافَّة المُستخدمين ، وأن مُخالَفة ذلك يُعَدُّ بمثابة تعدّي على حَقِّ الملكيَّة الفكرية وحق الإبتكار للتطبيق الإلكتروني الخاص بالشركة مالكَة هذا التطبيق .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;يجوز مُشارَكة المعلومات الشخصية أو أيَّة معلومات أُخرى مُتعلِّقَة بهوية المستَخدِم للأطراف المتعامَل معها والأطراف ذات الصِلَة والأطراف المعلِنَة ، ويُعَدُّ قُبول المستَخدِم للشروط والأحكام بمثابة تفويضٍ بذلك .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;التطبيق غير مسؤول عن الإجراء الذي تَتَبنّاهُ الأطراف الثالثة المتعامَل معها عند طلب المعلومات الشخصية للمُستخدِمين ، وعلى المستَخدِم مُراجعة سياسة الخصوصية والأمان لكُلِّ رابط يقومُ بتسجيلِ الدخولِ إليه عند تسجيل الدخول إلى مواقِع الأطراف الثالثة ، ولن يَخضَع المستَخدِم لشرط الأمان والخصوصية التي يُوفِّرها تطبيق بيلي . علاوة على ذلك ، فإن التطبيق غير مسؤول عن المواقِع الإلكترونية للأطراف (الغير) المتعامَل معها المحتوى .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;يخضَع المُستخدِم لكافَّة الرُسوم التي قد يَفرضُها التطبيق مُقابِل أداء أيِّ خِدمة من الخدَمات التي يُؤدِّيها التطبيق ، ويُقِرُّ المُستَخدِم بمسئوليته عن دَفْع أيَّة رُسوم قد تَطلُبها المنشأة صاحبة الحَقِّ في هذا التطبيق الالكتروني والتي تتولّى تحديد قيمة الرسوم لكُلِّ خِدمَة من الخدمات المُعلَن عنها من قِبَل الشركة مالِكَة هذا التطبيق الإلكتروني .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;يَحِقُّ للشركة مالكَة هذا التطبيق خَصْم أو إستِقطاع أيَّة رُسوم تكون مفروضَة على الخِدمَة وذلك عن طريق الخصْم من حساب البِطاقَة الإئتمانية أو الكي نِت الخاصَّة بالمستَخدَم أو الإستقطاع ، وللتطبيق حق إمتياز على تلك الرسوم ، وتُعَدُّ مُوافَقَة المستَخدِم على هذه الشروط والأحكام بمثابَة تفويضٍ بالإستقطاع أو الخصم .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;بمُجرَّد قيام الشَركَة مالكَة هذا التطبيق بالإعلان عن الشروط والأحكام التي تَنطَبِق على المُستَخدِم تكونُ نافذةً في حَقِّ المُستخدِم تِلقائياً إعتباراً من وقتِ نشرها عبر التطبيق الإلكتروني .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;من المعلوم لدى أيِّ مُستخدِم أو مُشارِك لتطبيق (إدفعلي &lt;/strong&gt;&lt;strong&gt;Payle&lt;/strong&gt;&lt;strong&gt;) أو زائر أو مُتلَقّي الخدمة بكَونِهِ مسئولاً مسئولية مُنفردةً عن مشروعيّة الأموال المتداوَلة والمحصَّلة والمحوَّلة عبر البرنامج مُزوِّد الخدمة (التطبيق) ، كما يُقِرُّ أيضاً المُستخدِم أو المُشارِك أو الزائر أو مُتلقّي الخدمة بأن هذه الأموال سالِفَة الذِكر ليست مُتحصِّلة من جريمة ، دون أدنى مسئولية على مُزوِّد الخدمة صاحب هذا التطبيق وذلك عملاً بأحكام القوانين المُشار إليها .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;من المعلوم لدى الكافَّة من المُشاركين ومُتلقّي الخدمة أن مُجرَّد زيارة هذا التطبيق لتلقّي أيِّ خِدمة منه يُعَدُّ إقراراً منه بألاّ يكونَ الغرضُ من تقديم أو جَمْع الأموال أو الشروع في ذلك سواءً بصورةٍ مُباشرةٍ أو غير مُباشرة وسواءً كان بشكل مشروع أو غير مشروع مصحوباً بنيَّة إستخدامها لإرتكاب أيِّ عملٍ إرهابيٍّ ، كما أنه يُقِرُّ بعدم عِلمِه بأن هذه الأموال سواءً سوف تُستَخدَم كُلياً أو جزئياً لهذا العمل ، وتنعقد مَسئوليته مُنفرداً عن مُخالَفَة ذلك دون أدنى مسئولية في ذلك على مُزوِّد الخدمة صاحب هذا التطبيق .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;من المَعلوم لدى الكافَّة أن مُزوِّد الخدمة يمتلك الحَقَّ في إتّخاذ كافَّة التدابير الإحترازية سواءً كانت المُشدَّدة أو الخفيَّة عند تقييم مَخاطِر غسيل الأموال وتمويل الإرهاب ، في أيِّ وقتٍ بِغَضِّ النَظَر عن وقوع أيِّ جريمة من هذا القبيل من عَدمه ، ولمزوِّد الخدمة الحقَّ بطلب أيَّة مستندات أو بيانات لتقديمها للجهات الرقابية ، والمستخدِم وحدَهُ مسئولٌ عن صحّة تلك المستندات وعن أيِّ مسئولية تَنتُج عن العمليات التي أبرَمها.&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;من المَعلوم لدى الكافَّة أن مُزوِّد الخِدمة يملِك حَقَّ التعرُّف والتحقُّق من هوية المُشاركين ومُتلقّي الخدمة وزائري التطبيق بإستخدام كافَّة السُبُل المتاحَة والكشف عن الوثائق وبإستخدام البيانات والمعلومات الموثوقة والمستقلَّة ، وفهم الغَرَض وطبيعة العلاقة ، كما يَحِقُّ له أيضاً طَلَب أيَّة معلومات إضافية في هذا الشأن ، كما له الحق في المُتابَعَة المُستمرَّة في كُلِّ ما يتعلَّق بعلاقة المتعامِلين وفَحصِ أيَّ مُعامَلات وذلك لضمان توافُقها مع ما يتوافَر عن العميل أو المُشارِك أو مُتلَقّي الخدمة أو الزائر قبل وخلال فتح الحساب أو عند التعامُل ، وعند إجراء أيِّ مُعامَلَة تزيد عن الحَدِّ المُقرَّر باللائحة التنفيذية للقانون رقم 106 لسنة 2013 في شأن مُكافَحَة غَسْلِ الأموال وتمويل الإرهاب ، وعند الإشتباه في عمليات غَسْلِ أموال أو تمويل للإرهاب وذلك إعمالاً لأحكام القوانين المعمول بها في هذا الشأن .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;من المَعلوم لدى الكافَّة أن مُزوِّد الخدمة بهذا التطبيق يَملِك الحَقَّ في الإمتناع عن فتح أيِّ حساب أو البدء في أيِّ تعامُل ، أو الإمتناع عن تنفيذ أيِّ مُعامَلة أو إنهاء أيِّ علاقة عند عدم الإلتزام بأحكام القوانين المُشار إليها سَلفاً مع عدم أحقيَّة المشارك أو الزائر أو مُتلَقّي الخدمة أو العميل في الرجوع على مُزوِّد الخدمة صاحب هذا التطبيق بشأن إمتناعه عن أداء الخدمة أو فتح الحساب ، وذلك عملاً بأحكام القوانين المعمول بها في هذا الشأن .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;من المعلوم لدى الكافَّة أحقيَّة مُزوِّد الخدمة في وضع الأنظمة التي تراها مناسبة لإدارة المخاطِر لتحديد ما إذا كان العميل أو المشارك أو مُتلَقّي الخدمة أو الزائر شخصاً مُعرّضاً للمخاطر لتداركها .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;من المعلوم لدى الكافَّة أحقيَّة مُزوِّد الخدمة في تطبيق تدابير العناية الواجِبَة المُشدَّدة على المُعامَلات الخاصَّة بأشخاص أو مؤُسَّسات مالية لدى البُلدان التي تم تحديدها كعالية المَخاطِر وفقاً لأحكام المادة الرابعة من القانون رقم 106 لسنة 2013 في شأنِ مُكافَحَة غَسْلِ الأموال وتمويلِ الإرهاب وفي تنفيذ أحكام القانون المَعني يَحِقُّ لمُزوِّد الخدمة الإستعانة بالغير للقيام ببعض عناصر عمليات العناية الواجبة وفقاً لِما تُحدِّده اللاّئِحَة التنفيذية للقانون المعني .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;من المعلوم لدى الكافَّة إلتِزام مُزوِّد الخدمة بإخطار وِحْدَة التحرِّيات المالية الكويتية المُختصَّة أو الجهات المختصَّة دون تأخير بأيِّ مُعامَلة أو مُحاوَلة لإجراء المُعامَلة بصرف النَظَر عن قيمتها في حالة ما إذا إشتَبَهَت أو توافَرَت لديه دلائل كافية للإشتباه في أن تلك المُعاملات تجري بأموالٍ مُتحصِّلَة من جريمة أو أموال مُرتَبِطة أو لها علاقة بها أو يمكن إستعمالها للقيام بعَمليات غَسْلِ أموال أو تمويل إرهاب . مع أحقيَّة مُزوِّد الخدمة في عدم الإفصاح للمُشارِك أو مُتلقّي الخدمة أو الزائر أو أيِّ عميل عن الإخطارات التي تتم وفقاً لما نَصَّ عليه القانون ، أو أيّة مَعلوماتٍ ذات الصِلة أو بما يَتعلَّق بأيِّ إجراءٍ من إجراءات التحقيق في غَسْلِ الأموال أو تمويل الإرهاب ، وذلك عملاً بأحكام القانون المعني .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;تحتفظ الشركة مالِكَة التطبيق بحقِّها في إيقاف التطبيق أو جُزءٍ منه سواءً بصفَةٍ مُؤقَّتة أو دائمة متى كانت الحاجة والأمور في العمل تقتضي ذلك دون حاجة لإخطار المُستخدِم ودون الوقوف على مُوافَقَته ، دون أدنى مسئولية على الشركة مالِكَة هذا التطبيق الإلكتروني .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;تقوم الشركة مالِكَة التطبيق بحماية هذا التطبيق الإلكتروني بأيِّ وسيلةٍ قانونيةٍ وأن المُستَخدِم يَخضَع في ذلك لأيِّ قواعِد تنظيمية قد تَفرِضُها الشركة لتأمين سلامة هذا التطبيق من أيِّ إعتداءٍ قد يَتَعرَّض له .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;لا يجوز إستخدام التطبيق في إرسال رسائل أو نشر أو إذاعة أو بَثِّ أيِّ مُحتوى قد يكون غير قانوني أو مُنتَهِك لحقوق ملكية الشركة مالِكة التطبيق الإلكتروني ، سواءً كانت ملكية المُقوِّمات المادية والمعنوية بما فيها حَقّ الملكية الفكرية وحَقّ الإبتكار .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;يَلتَزم المُستخدِم بعدم مُحاوَلة المرور غير القانوني لأيٍّ من خدمات الشركة مالكة التطبيق الإلكتروني أو الحسابات الأُخرى أو أنظمة الإتصال عبر شبكة الأنترنت .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;يَلتَزم المستخدِم بأن يكون إستخدامَهُ للتطبيق مشروعاً ولا تكون التعاملات ناتجة عن أمور مخالفة للنظام العام والآداب العامة ولا تُشكِّل تعامل غير مشروع ، أو مُخالَفة للقانون ، وأيُّ إستعمالٍ يكون مُخالِف لأحكام القانون فهو من مسئولية المستخدِم وحدَهُ ويتحمَّل كامل المسئولية نتيجة عنه ، مع أحقيَّة المنشأة مالِكة التطبيق بالتعويض نتيجة الإستخدام الغير مشروع .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;خامساً : القيود الجغرافية : &lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;الهدف من إنشاء هذا التطبيق هو تقديم كافّة الخدمات المُتاحَة للأشخاص المُستخدِمين للتطبيق سواءً كانوا أشخاص طبيعيين أو إعتباريين الكائن مقرُّهم بدولة الكويت ، وفي حالة إستخدام التطبيق أو زيارته من أيِّ شخصٍ غيرُ مُقيمٍ بالكويت ومُقيم بأيِّ دولة أُخرى في أنحاء العالم فإنه يَتحَمَّل المسئولية عن الإلتزام بكافَّة القواعد القانونية المحلّية وأن يكون المرور بالتطبيق بناءً على إختيار هذا المُستخدِم وإقراراً منه بالمُوافَقَةِ المُسبَقَةِ على قبوله تطبيق القواعد القانونية واللّوائح المحلّية وإقراراً منه بقبوله تطبيق الشروط والأحكام .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;سادساً : حدود المسئولية :&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;يَتحدَّد نِطاقُ المسئولية للتطبيق أمام المُستخدِم في أداء الخدمة المُعلَن عنها من الشركة المالِكَة للتطبيق وفقاً لكافَّة الشروط والأحكام الثابتة بهذا التطبيق ، ولذلك لن تُقدِّم الشركة أيَّة تعهُّدات أو ضمانات من أيِّ نوعٍ من الأنواع سواءً كانت صريحة أو ضمنية تتعلَّق بتشغيل التطبيق أو المُحتَوى أو المواد التي تَرِدُ بها ، وعلى ذلك لا تَضمَن الشركة خُلُوَّ التطبيق من أيِّ فيروسات أو أيِّ مُكوِّنات ضارَّة ، وعلى ذلك فإن الشركة لن تَتَحمَّل أيَّ مسئولية عن أيَّة أضرار قد تَنتُج عن إستخدام هذا التطبيق .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;لا تتحمَّل المنشأة مالِكة التطبيق أو تابعيها أيَّ مسؤولية عن الأضرار أو الخسائر ذات الصِلَة ، و على سبيل المثال لا الحَصْر ، لا تتحمَّل التعويضات أو الخسائر أو النفقات سواءً كانت مُباشِرَة أو غير مُباشِرَة أو خاصَّة أو مُرتبِطَة أو عَرَضيّة ، والتي تتعلَّق بـالتطبيق أو إستخدامه أو إستحالَة إستخدامه من قِبَل أيِّ طرفٍ مُعيَّن ، أو يتعلَّق بأيِّ قُصورٍ في الأداء أو نَقْصٍ أو إنقطاعٍ أو تأخير تشغيلي أو تأخير إرسال أو فَشَلِ النظام أو الإتصال .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;لن يَتِمَّ إستخدام هذه الإتفاقية على أنها تُنشِئُ شراكةً ، أو مشروع مُشتَرك ، أو وكالة ، أو علاقة صاحب عمل وتابع أو عامل أو أيِّ علاقة من أيِّ نوعٍ كانت بين المنشأة مالِكة التطبيق وبين أيِّ شخصٍ طبيعي أو إعتباري يَعمَل في خدمة الشركة صاحبة التطبيق أو المُعلِنين في التطبيق ، ولا يجوز تفسير أيُّ شيءٍ واردٍ على ذلك النحو في هذه الإتفاقية على أنه يُشكِّل أيَّ علاقة وكالة أو شراكة أو عمل بين مالِكة التطبيق وبين من ذُكِروا سابقاً أعلاه . وأيَّ مسئولية قد تنشأ عن الخدمات المقدَّمة من هؤلاء الأشخاص فهي مُتعلِّقة حصراً بين المستخدم ومُزوِّد الخدمة دون أيِّ علاقة للمُنشأة مالِكة التطبيق .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;سابعاً : شروط تأمين حسابات المُستخدِم :&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;يُقِرُّ المُستخدِم ويُوافِق على تحمُّلِهِ المسئولية في الحفاظ على سِرِّية كلمة المرور الخاصَّة به للوصول إلى الخدمات التي يُقدِّمها التطبيق ، وبناءً عليه فإن المُستَخدِم يُوافِق على تحمُّل المسئولية بمفرَدِهِ أمام الشركة عن جميع الأنشطة التي تحدُث أثناء إستخدامه لكلمة المرور الخاصَّة به .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;وفقاً لهذه الشروط والأحكام فإن المُستخدِم يَمنَح الشركة مالِكة التطبيق الحَقَّ في تقييم أو تسجيل إستخدامه للتطبيق وخصوصاً لتأمين أغراض أعمال الشركة ، وذلك بهدف تقييم الجودة .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;يُوافِقُ المُستَخدِم على أنه يجوز للشركة إستخدام البيانات التي يُقدِّمها من خلال هذا التطبيق ويجوز أن تحتفظ الشركة أو أيِّ طَرَف ثالث تُفوِّضُهُ الشركة بهذه البيانات الشخصية لأغراض تحصيل الأموال أو قيْد الدَيْن أو تأمين التطبيق .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt;&lt;em&gt;&lt;u&gt;ثامناً : الشروط العامة :&lt;/u&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;وفقاً لتلك الشروط فإن المُستَخدِم يُقِرُّ بمُوافَقَتِهِ على جميع التعليمات الخاصّة بكُل خدمة عبر هذا التطبيق .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;يَلتَزِم المُستَخدِم بعدم إستخدام الخدمات المقدَّمة عبر التطبيق الإلكتروني بأيِّ شكلٍ قد يتعارَض مع قوانين دولة الكويت .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;تحتفظ الشركة بحقِّها في فَرْضِ الرسوم على المرور لبعض التطبيقات والمواقِع أو المعلومات التي تَرِدُ في هذا التطبيق ، وبالتالي فقد تخضَعُ هذه الخدمات أو المعلومات للبنود والشروط الإضافية .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;تخضَعُ الشروط والأحكام التي تَضَعها الشركة مالِكة التطبيق والتي من حقِّها تعديلها في أيِّ وقتٍ مع قبول المُستَخدِم مُسبَقاً لأيِّ تعديلٍ لكافَّة القوانين واللّوائِح المعمول بها داخل دولة الكويت .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;يجب على المُستَخدِم العمل على مُداوَمَةِ زيارة التطبيق وتَصَفُّحِ كافَّة أعمال التطوير أو القيام بالإتصال بخدمة العملاء لكَيّ يُراجِع توثيق وإعتماد الرسائل التي تَصِلُ له عبر البريد الإلكتروني ( الأيميل ) أو الرسائل القصيرة النَصيَّة على الموبايل في حال ظهورها على أنها مُراسَلات رسمية من الشركة أو من ينوب عنها أو من يستخدم إسمها أو عَلاقتها التجارية ، وعلى سبيل المثال العروض والهدايا المقدَّمة وأيِّ تعديلٍ يَطرأ على تلك الشروط والأحكام .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;من المَعلوم لدى الكافَّة أن الشركة مَالِكة هذا التطبيق سوفَ تتعاقَد مع بعض الشركات والمُؤسَّسات مُعاوني الخدمة بغَرَض الإعلان عنها وليس من حَقِّ أيِّ مُشارِك أن يَعتَرض على أيِّ إعلانٍ للخدمة خاصَّة بالشركة مالِكة التطبيق وليس لأيِّ مُشارِك أيُّ حَقٍّ بشأنها . &lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;من المعلوم لدى كافَّة المُشاركين أنه بمُجرَّد الضغط على زر تسجيل للمشارَكة في التطبيق يُعتَبَر هذا قبولاً منه لكافَّة الشروط والأحكام المُعلَن عنها . &lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;من المَعلوم لدى الكافَّة أن الشركة مالِكَة هذا التطبيق قد قامَت بمَنْحِ الشركات مُعاوني الخِدمة مُدَّة إختبار لضمان حُسن أداء الخدمة دون أيَّة أخطاء وأن مُعاون الخدمة خلال هذه المُدّة مَسئولٌ مَسئولية كاملَة عن أيَّة أخطاء في أداء الخدمة المُلتَزِم بأدائها دون أدنى مسئولية على الشركة مالِكة هذا التطبيق . &lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;لا يَحِقُّ للمُستَخدِم نِسْخَ أو حِفْظَ أيِّ جُزءٍ من هذا التطبيق ، ويَحظُر على المستَخدِم جمع البيانات ، دون إذن خطّي مُسبَق من الشركة مالِكة التطبيق .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;strong&gt;تُعتَبَر جميع العلامات التجارية والشِعارات المعروضَة على التطبيق ملكيَّة خاصَّة للشركة مالِكة التطبيق ويَحظُر على المستَخدِم نَسخَها أو إستخدامها دون إذن كتابي مُسبَق .&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+                        &lt;p style=&quot;text-align: right;&quot;&gt;&amp;nbsp;&lt;/p&gt;
+                    </textarea>
+                    
+               </div>
+               <script>
+        ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
+                <div id="search_result">
+                    <input type="hidden" id="id" name="id" value="2" 
+                           />
+                     <input type="hidden" id="titleInLang" name="titleInLang" value="text.termsandconditions" 
+                           />
+                     <input type="hidden" id="title" name="title" value="termsandconditions" 
+                           />
+                    
+                </div>
+           </div>
+            <div  class="row" style="padding: 10px;">
+               <input class="btn btn-danger" id="btnSubmit" 
+                   type="submit" value="Update" name=""  />
+<!--               <a class="btn btn-success"
+                  th:href="@{./informationcontent(title=
+                  ${ informationContentRequest.title })}" 
+                  th:utext="#{text.view}"></a>-->
+               
+            </div>
+
+             </form>    
+                
+            </div>
+
+        </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+      <!-- content-wrapper ends -->
+      <script>
+
+        var popUpObj;
+    
+        function showModalPopUp(){
+    
+          window.alert("Payle Mall is not currently available!!!!!!!")
+    
+    
+        }
+    
+      </script>
+      <!-- partial:partials/_footer.html -->
+      <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+          <span class="text-muted text-center text-sm-left d-block d-sm-inline-block"> Premium <a
+              href="https://home.payleq8.com/" target="_blank">PayLe Kuwait</a></span>
+          <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © .<a
+              href="https://home.payleq8.com/" target="_blank">Payle 2021</a> </span>
+        </div>
+      </footer>
+      <!-- partial -->
+    </div>
+    <!-- main-panel ends -->
+  </div>
+  <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="../../vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="../../../../vendors/chart.js/Chart.min.js"></script>
+  <script src="../../vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="../../vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="../../js/dataTables.select.min.js"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="../../js/off-canvas.js"></script>
+  <script src="../../js/hoverable-collapse.js"></script>
+  <script src="../../js/template.js"></script>
+  <script src="../../js/settings.js"></script>
+  <script src="../../js/todolist.js"></script>
+  <script src="../../package.json"></script>
+  <script src="../../js/Chart.roundedBarCharts.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="../../js/dashboard.js"></script>
+  <script src="../../js/Chart.roundedBarCharts.js"></script>
+  <!-- End custom js for this page-->
+  <script src="../../js/chart.js"></script>
+  <script>
+    $('.dropdown-toggle').dropdown();
+</script>
+<script> InitProgressBar();</script>
+  <div id="ProgressBarContainer"><div class="modal fade" id="loading1" data-rms="" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:100%"><div class="progress progress-striped active" style="margin: 25% auto;width:100%; max-width:400px;"><div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%;"></div></div></div></div>
+  <divcursor id="divCursor" class="" style="position: absolute; border: none; padding: 3px; border-radius: 2px; background-color: rgba(0, 0, 0, 0.8); color: white; font-family: Arial; font-size: 12pt; font-style: normal; z-index: 999; left: 933px; top: 730px; display: none;">Active merchants:42105 (96.9 %)</divcursor>
+</body>
+
+</html>

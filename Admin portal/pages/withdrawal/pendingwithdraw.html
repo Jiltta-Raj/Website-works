@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Withdrawal</title>
+    <!-- plugins:css -->
+    
+    <link rel="stylesheet" href="../../vendors/feather/feather.css">
+    <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../../vendors/font-awesome/css/all.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="../../vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="../../js/select.dataTables.min.css">
+    <link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
+    <link rel="stylesheet" href="/scss/vertical-layout-light/style.scss">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="../../images/logo-4.png" />
+  </head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="/index.html"><img src="../../images/logo-4.png" class="mr-2"
+            alt="logo" /></a>
+
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
+              data-toggle="dropdown">
+              <i class="icon-globe"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+              aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Choose Prefered Language</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-dark">
+                    <i class="ti-world mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Arabic</h6>
+
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="ti-world mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">English</h6>
+
+                </div>
+              </a>
+
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="../../images/faces/face28.jpg" alt="profile" />
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="/pages/profile.html">
+                <i class="ti-settings text-primary"></i>
+                Profile Settings
+              </a>
+              <a class="dropdown-item" href="/pages/forgotpassword.html">
+                <i class="ti-marker text-primary"></i>
+                Change Password
+              </a>
+              <a class="dropdown-item" href="/pages/login.html">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
+
+            </div>
+          </li>
+
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+            data-toggle="offcanvas">
+            <span class="icon-menu"></span>
+          </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">
+              <i class="fa-solid fa-dashboard menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/merchant/merchants.html" aria-expanded="false" aria-controls="ui-basic">
+              <i class="fa fa-user-circle menu-icon"></i>
+              <span class="menu-title"> Merchants</span>
+
+            </a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#transaction" aria-expanded="false" aria-controls="transaction">
+              <i class="fa-solid fa-circle-dollar-to-slot menu-icon"></i>
+              <span class="menu-title">Transactions</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/transaction.html">All Transactions</a></li>
+              </ul>
+            </div>
+
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/summary.html">Summary</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/incomplete.html">Incomplete</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/vm.html">Visa Master</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/completevm.html">Complete VM</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/incompletevm.html">Incomplete VM</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/transactions/wallet.html">Payle Wallet</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="transaction">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">
+                  <a class="nav-link" href="/pages/transactions/amex.html">Amex Transactions</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#withdraw" aria-expanded="false" aria-controls="withdraw">
+              <i class="fa-solid fa-hand-holding-dollar menu-icon"></i>
+              <span class="menu-title">Withdrawals</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="withdraw">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/withdrawal/withdrawal.html">Summary</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="withdraw">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/withdrawal/pendingwithdraw.html">Pending</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="withdraw">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="/pages/withdrawal/rejectedwithdraw.html">Rejected</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/debit.html" aria-expanded="false" aria-controls="tables">
+              <i class="ti-credit-card menu-icon"></i>
+              <span class="menu-title">Debit/Credit</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/balance.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-balance-scale menu-icon"></i>
+              <span class="menu-title">System Balance</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/message.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-comments menu-icon"></i>
+              <span class="menu-title">Messsage</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/FTF.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-archive menu-icon"></i>
+              <span class="menu-title">FTF Files</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/reports.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-file menu-icon"></i>
+              <span class="menu-title">Reports</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/invoice.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-receipt menu-icon"></i>
+              <span class="menu-title">Invoices</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/graphs.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-line-chart menu-icon"></i>
+              <span class="menu-title">Graphs</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/gateway.html" aria-expanded="false" aria-controls="tables">
+              <i class="fa fa-users menu-icon"></i>
+              <span class="menu-title">Gateway Owners</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/certificate.html" aria-expanded="false" aria-controls="auth">
+              <i class="fa fa-bank menu-icon"></i>
+              <span class="menu-title">Bank Certificates</span>
+            </a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="/pages/gallery.html" aria-expanded="false" aria-controls="error">
+              <i class="fa fa-camera menu-icon"></i>
+              <span class="menu-title">Gallery</span>
+
+            </a>
+          </li>
+          <li class="nav-item" id="btn-goto-mall">
+            <a class="nav-link" href="#" onclick="showModalPopUp()">
+              <i class="fa fa-shopping-cart menu-icon"></i>
+              <span class="menu-title">Payle Mall</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/rental.html">
+              <i class="fa fa-asterisk menu-icon"></i>
+              <span class="menu-title">Rental</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/settings/settings.html">
+              <i class="fa fa-gear menu-icon"></i>
+              <span class="menu-title">Settings</span>
+            </a>
+          </li>
+
+
+
+
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+              
+            <div class="col-md-12 grid-margin transparent">
+                <div>
+                    <div class="heading-line2">
+                        <label>Pending withdrawals</label>
+                        
+                        <button class="btn btn-blue btnbspr btn-lg f-r space-btn" id="printbtn" url="./printpendingwithdrawals?code=&amp;name=&amp;date=&amp;status=&amp;amount=">
+                        <span class="fa-solid fa-print"></span></button>
+                        <a href="./pendingwithdrawals" class="btn btn-warning pull-right ma-r-5 space-btn">
+                        <span class="fa-solid fa-list-alt"></span>  
+                        <labe>Clear</labe>      
+                        </a>
+                        <button class="btn btn-warning f-r button-wid 
+                                btn_do_action_pendingwithdrawal ma-r-5 space-btn">
+                            <span class="glyphicon ">Do</span>
+                        </button>
+                        <div class="searchbox space-btn" style="float: right">
+                        <div class="form-group">
+                           <select class="form-control" name="action_pendingwithdrawal" id="action_pendingwithdrawal">
+                           <!--<option value="4" th:text="#{text.exportallseparatebank}"></option>-->
+                           <!--<option value="5" th:text="#{text.exportallcombinedbank}"></option>-->
+                           <!--<option value="6" th:text="#{text.exportselectseparatebank}"></option>-->
+                           <!--<option value="7" th:text="#{text.exportselectcombinedbank}"></option>-->
+                           <option value="5">Export all</option>
+                           <option value="7">Export select</option>
+                           <option value="9">Export all (Burgan)</option>
+                           <option value="8">Export select (Burgan)</option>
+                           <option value="2">Approve all</option>
+                           <option value="3">Approve select</option>
+                           </select> 
+                        </div>
+                        </div>
+                        <a href="./exportpendingwithdrawals?code=&amp;name=&amp;date=&amp;status=&amp;amount=" class="excel-modal btn btn-lg btnbspr btn-default space-btn
+                        exprot-btn ma-r-5"> <strong>CSV</strong>
+                        <span class="fa-solid fa-file-export"></span></a>
+                        <div class="clearfix"></div>
+                    </div>
+                    <!--    search here-->
+                    <div class="">
+                         <div class="searchbox-2">
+                            <div class="form-group ">
+                                <input class="form-control button-click-pendingwithdrawals" type="text" id="requestname" name="requestname" value="" placeholder="Merchant name">
+                            </div>
+                        </div> 
+                        <div class="searchbox-2">
+                            <div class="form-group ">
+                                <input class="form-control button-click-pendingwithdrawals" type="text" id="requestcode" name="requestcode" value="" placeholder="Merchant code">
+                            </div>
+                        </div> 
+                        <div class="searchbox-2">
+                            <div class="form-group ">
+                                <input class="form-control button-click-pendingwithdrawals" type="number" min="0" id="requestamount" name="requestamount" value="" placeholder="Amount">
+                            </div>
+                        </div> 
+                        <div class="searchbox-2">
+                            <div class="form-group ">
+                                <input class="form-control button-click-pendingwithdrawals" type="text" id="requestbankname" name="requestbankname" value="" placeholder="Bank name">
+                            </div>
+                        </div> 
+                        <div class="searchbox-2">
+                            <div class="form-group ">
+                                <input class="form-control button-click-pendingwithdrawals" type="text" id="requestaccountnumber" name="requestaccountnumber" value="" placeholder="Account number">
+                            </div>
+                        </div> 
+                        <div class="searchbox-2">
+                            <div class="form-group">
+                                <input class="form-control datepicker-input button-click-pendingwithdrawals" type="text" name="requestdate" value="" placeholder="Date"onfocus="(this.type='date')" onblur="(this.type='text')">
+                            </div>
+                        </div>
+                        
+                        <!-- Added By Asad 24/06/2022 -->
+                    <div class="searchbox set-6 page-size">
+                        <div class="form-group">
+                            <select class="form-control" id="requestsize" name="requestsize">
+                                <option value="10">Display</option>
+                                <option value="30">30</option>
+                                <option value="50">50</option>
+                                <option value="70">70</option> 
+                            </select> 
+                        </div>
+                    </div>
+                        
+                        <div class="searchbox-m">
+                            <button id="btn-search-pendingwithdrawals" type="submit" name="" class="btn_search btn btn-success
+                            btn-right-controle f-r btn-search-pendingwithdrawals">
+                                <span class="fa-solid fa-search"></span>
+                                <span>Search</span>
+                            </button>
+                        </div>
+                        <div class="searchbox-m">
+                            <a role="button" class="btn btn-success btn-right-controle" href="./pendingwithdrawals">
+                                <span class="fa-solid fa-refresh"></span>
+                                <span>All</span></a>
+                        </div>
+                    </div>
+            <!--    search end-->
+                <div class="clearfix"></div>
+            <br>
+        <!--    grid view here-->
+                <div class="teble-scroll">
+                    <div class="teble-scroll-content">
+                        <table id="tbl_history" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Id</th>   
+                                <th><a href="./pendingwithdrawals?sort=merchantName,asc&amp;code=&amp;name=&amp;date=&amp;amount=&amp;bankname=&amp;accountnumber=&amp;selector=0">
+                                <span>Merchants</span></a></th> 
+                                
+                                <th><a href="./pendingwithdrawals?sort=merchantCode,asc&amp;code=&amp;name=&amp;date=&amp;amount=&amp;bankname=&amp;accountnumber=&amp;selector=0">
+                                <span>Merchant code</span></a></th>
+                                
+                                <th><a href="./pendingwithdrawals?sort=bankName,asc&amp;code=&amp;name=&amp;date=&amp;amount=&amp;bankname=&amp;accountnumber=&amp;selector=0">
+                                <span>Bank name</span></a></th> 
+                                <th><a href="./pendingwithdrawals?sort=bankAccountNumber,asc&amp;code=&amp;name=&amp;date=&amp;amount=&amp;bankname=&amp;accountnumber=&amp;selector=0">
+                                <span>Account number</span></a></th> 
+                                <th><a href="./pendingwithdrawals?sort=requestDate,asc&amp;code=&amp;name=&amp;date=&amp;amount=&amp;bankname=&amp;accountnumber=&amp;selector=0">
+                                <span>Date</span></a></th> 
+                                <th><a href="./pendingwithdrawals?sort=amount,asc&amp;code=&amp;name=&amp;date=&amp;amount=&amp;bankname=&amp;accountnumber=&amp;selector=0">
+                                <span>Amount</span></a></th> 
+                                <th><a href="./pendingwithdrawals?sort=status,asc&amp;code=&amp;name=&amp;date=&amp;amount=&amp;bankname=&amp;accountnumber=&amp;selector=0">
+                                <span>Status</span></a></th>
+                                <th><a href="./pendingwithdrawals?sort=validCivilId,asc&amp;code=&amp;name=&amp;date=&amp;amount=&amp;bankname=&amp;accountnumber=&amp;selector=0">
+                                <span>Civil id</span></a></th>
+                                <th><a href="./pendingwithdrawals?sort=isSelected,asc&amp;code=&amp;name=&amp;date=&amp;amount=&amp;bankname=&amp;accountnumber=&amp;selector=0">
+                                        <span>Select</span>
+                                    </a>
+                                    
+                                </th>
+                                <th style="color: rgb(51, 122, 183)">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="pendingwithdrawal_tbody">
+                            <tr>
+                                <td>1</td>
+                                <td>asad asad asad</td>
+                                <td>
+                                <a href="./merchantcashbook?id=283829" target="_blanck">283829</a>
+                                </td>
+                                <td>Doha Bank [Doha]</td>
+                                <td>KW81BRGN0000000000007046311002</td>
+                                <td>2022-08-31 11:52:55</td>
+                                <td>69.000</td>
+                                <td>On processing</td>
+                                <td><img class="img-thumbnail-progress" src="/images/1.png"></td>
+                                <td> <input class="genid" value="1214079" type="checkbox"></td>
+                                <td>
+        <!--                            <a th:if="${record.status eq 0 and record.inFTFFile eq 0}"
+                                       class="btn  btn-xs btnbspr btn-danger space-btn
+                                       btn_withdrawalrequest_reject" 
+                                       th:data-url="${'./rejectwithdrawalrequest'}"
+                                       th:data-id="${record.withdrawalId}"
+                                       th:data-code="${record.merchantCode}"
+                                       >
+                                        
+                                        <span class="fa-solid fa-remove "></span>
+                                        <span th:utext='#{text.reject}'></span></a>-->
+                                    <a class="btn  btn-xs btnbspr btn-danger space-btn
+                                       btn-toggle-modal-by-withdrawal-reject" data-url="./withdrawalRejectConfrimationModel?userName=283829&amp;id=1214079" data-id="1214079" data-code="283829">
+                                        
+                                        <span class="fa-solid fa-remove "></span>
+                                        <span>Reject</span></a>
+                                    <a class="btn btn-l-g btn-xs btnbspr
+                                       btn_withdrawalrequest_accept" data-url="./acceptwithdrawalrequest" data-id="1214079" data-code="283829">
+                                        <span class="fa-solid fa-check"></span>
+                                        <span>Accept</span></a>
+                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>omar m nezar hodrob</td>
+                                <td>
+                                <a href="./merchantcashbook?id=283799" target="_blanck">283799</a>
+                                </td>
+                                <td>Kuwait Finance House [KFH]</td>
+                                <td>KW41WRBA0000000000001281864018</td>
+                                <td>2022-08-25 13:14:00</td>
+                                <td>500.000</td>
+                                <td>On processing</td>
+                                <td><img class="img-thumbnail-progress" src="/images/1.png"></td>
+                                <td> <input class="genid" value="1214058" type="checkbox"></td>
+                                <td>
+        <!--                            <a th:if="${record.status eq 0 and record.inFTFFile eq 0}"
+                                       class="btn  btn-xs btnbspr btn-danger space-btn
+                                       btn_withdrawalrequest_reject" 
+                                       th:data-url="${'./rejectwithdrawalrequest'}"
+                                       th:data-id="${record.withdrawalId}"
+                                       th:data-code="${record.merchantCode}"
+                                       >
+                                        
+                                        <span class="fa-solid fa-remove "></span>
+                                        <span th:utext='#{text.reject}'></span></a>-->
+                                    <a class="btn  btn-xs btnbspr btn-danger space-btn
+                                       btn-toggle-modal-by-withdrawal-reject" data-url="./withdrawalRejectConfrimationModel?userName=283799&amp;id=1214058" data-id="1214058" data-code="283799">
+                                        
+                                        <span class="fa-solid fa-remove "></span>
+                                        <span>Reject</span></a>
+                                    <a class="btn btn-l-g btn-xs btnbspr
+                                       btn_withdrawalrequest_accept" data-url="./acceptwithdrawalrequest" data-id="1214058" data-code="283799">
+                                        <span class="fa-solid fa-check"></span>
+                                        <span>Accept</span></a>
+                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Pasan Pramuditha Mura Mudalige</td>
+                                <td>
+                                <a href="./merchantcashbook?id=244333" target="_blanck">244333</a>
+                                </td>
+                                <td>Boubyan Bank [Boubyan]</td>
+                                <td>KW53BBYN0000000000000238225002</td>
+                                <td>2021-05-10 14:28:45</td>
+                                <td>492.000</td>
+                                <td>On processing</td>
+                                <td><img class="img-thumbnail-progress" src="/images/1.png"></td>
+                                <td> <input class="genid" value="1214007" type="checkbox" disabled="disabled"></td>
+                                <td>
+        <!--                            <a th:if="${record.status eq 0 and record.inFTFFile eq 0}"
+                                       class="btn  btn-xs btnbspr btn-danger space-btn
+                                       btn_withdrawalrequest_reject" 
+                                       th:data-url="${'./rejectwithdrawalrequest'}"
+                                       th:data-id="${record.withdrawalId}"
+                                       th:data-code="${record.merchantCode}"
+                                       >
+                                        
+                                        <span class="fa-solid fa-remove "></span>
+                                        <span th:utext='#{text.reject}'></span></a>-->
+                                    
+                                    
+                                     <span>Already in FTF</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>pasan pramuditha mudalige</td>
+                                <td>
+                                <a href="./merchantcashbook?id=270330" target="_blanck">270330</a>
+                                </td>
+                                <td>Doha Bank [Doha]</td>
+                                <td>KW13NBOK0000000000002007547141</td>
+                                <td>2021-05-03 10:01:06</td>
+                                <td>13.300</td>
+                                <td>On processing</td>
+                                <td><img class="img-thumbnail-progress" src="/images/4.png"></td>
+                                <td> <input class="genid" value="1214001" type="checkbox" disabled="disabled"></td>
+                                <td>
+        <!--                            <a th:if="${record.status eq 0 and record.inFTFFile eq 0}"
+                                       class="btn  btn-xs btnbspr btn-danger space-btn
+                                       btn_withdrawalrequest_reject" 
+                                       th:data-url="${'./rejectwithdrawalrequest'}"
+                                       th:data-id="${record.withdrawalId}"
+                                       th:data-code="${record.merchantCode}"
+                                       >
+                                        
+                                        <span class="fa-solid fa-remove "></span>
+                                        <span th:utext='#{text.reject}'></span></a>-->
+                                    
+                                    
+                                     <span>Already in FTF</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>First913256 mid113618 last570677</td>
+                                <td>
+                                <a href="./merchantcashbook?id=254050" target="_blanck">254050</a>
+                                </td>
+                                <td>Gulf Bank of Kuwait [GBK]</td>
+                                <td>KW14DEV0000004184620150724</td>
+                                <td>2021-03-05 16:15:34</td>
+                                <td>1607.100</td>
+                                <td>On processing</td>
+                                <td><img class="img-thumbnail-progress" src="/images/4.png"></td>
+                                <td> <input class="genid" value="1213982" type="checkbox" disabled="disabled"></td>
+                                <td>
+        <!--                            <a th:if="${record.status eq 0 and record.inFTFFile eq 0}"
+                                       class="btn  btn-xs btnbspr btn-danger space-btn
+                                       btn_withdrawalrequest_reject" 
+                                       th:data-url="${'./rejectwithdrawalrequest'}"
+                                       th:data-id="${record.withdrawalId}"
+                                       th:data-code="${record.merchantCode}"
+                                       >
+                                        
+                                        <span class="fa-solid fa-remove "></span>
+                                        <span th:utext='#{text.reject}'></span></a>-->
+                                    
+                                    
+                                     <span>Already in FTF</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>First547143 mid854829 last699252</td>
+                                <td>
+                                <a href="./merchantcashbook?id=246525" target="_blanck">246525</a>
+                                </td>
+                                <td>Gulf Bank of Kuwait [GBK]</td>
+                                <td>KW14DEV0000004044520150724</td>
+                                <td>2021-03-05 16:15:34</td>
+                                <td>655.900</td>
+                                <td>On processing</td>
+                                <td><img class="img-thumbnail-progress" src="/images/4.png"></td>
+                                <td> <input class="genid" value="1213974" type="checkbox" disabled="disabled"></td>
+                                <td>
+        <!--                            <a th:if="${record.status eq 0 and record.inFTFFile eq 0}"
+                                       class="btn  btn-xs btnbspr btn-danger space-btn
+                                       btn_withdrawalrequest_reject" 
+                                       th:data-url="${'./rejectwithdrawalrequest'}"
+                                       th:data-id="${record.withdrawalId}"
+                                       th:data-code="${record.merchantCode}"
+                                       >
+                                        
+                                        <span class="fa-solid fa-remove "></span>
+                                        <span th:utext='#{text.reject}'></span></a>-->
+                                    
+                                    
+                                     <span>Already in FTF</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>First890569 mid963830 last527107</td>
+                                <td>
+                                <a href="./merchantcashbook?id=245968" target="_blanck">245968</a>
+                                </td>
+                                <td>Boubyan Bank [Boubyan]</td>
+                                <td>KW14DEV0000004033620150724</td>
+                                <td>2021-03-05 16:15:34</td>
+                                <td>1487.210</td>
+                                <td>On processing</td>
+                                <td><img class="img-thumbnail-progress" src="/images/1.png"></td>
+                                <td> <input class="genid" value="1213980" type="checkbox" disabled="disabled"></td>
+                                <td>
+        <!--                            <a th:if="${record.status eq 0 and record.inFTFFile eq 0}"
+                                       class="btn  btn-xs btnbspr btn-danger space-btn
+                                       btn_withdrawalrequest_reject" 
+                                       th:data-url="${'./rejectwithdrawalrequest'}"
+                                       th:data-id="${record.withdrawalId}"
+                                       th:data-code="${record.merchantCode}"
+                                       >
+                                        
+                                        <span class="fa-solid fa-remove "></span>
+                                        <span th:utext='#{text.reject}'></span></a>-->
+                                    
+                                    
+                                     <span>Already in FTF</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>First442342 mid102219 last685849</td>
+                                <td>
+                                <a href="./merchantcashbook?id=243911" target="_blanck">243911</a>
+                                </td>
+                                <td>Boubyan Bank [Boubyan]</td>
+                                <td>KW14DEV0000003992420150724</td>
+                                <td>2021-03-05 16:15:34</td>
+                                <td>1409.500</td>
+                                <td>On processing</td>
+                                <td><img class="img-thumbnail-progress" src="/images/1.png"></td>
+                                <td> <input class="genid" value="1213979" type="checkbox" disabled="disabled"></td>
+                                <td>
+        <!--                            <a th:if="${record.status eq 0 and record.inFTFFile eq 0}"
+                                       class="btn  btn-xs btnbspr btn-danger space-btn
+                                       btn_withdrawalrequest_reject" 
+                                       th:data-url="${'./rejectwithdrawalrequest'}"
+                                       th:data-id="${record.withdrawalId}"
+                                       th:data-code="${record.merchantCode}"
+                                       >
+                                        
+                                        <span class="fa-solid fa-remove "></span>
+                                        <span th:utext='#{text.reject}'></span></a>-->
+                                    
+                                    
+                                     <span>Already in FTF</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>First375953 mid901567 last405885</td>
+                                <td>
+                                <a href="./merchantcashbook?id=253959" target="_blanck">253959</a>
+                                </td>
+                                <td>Gulf Bank of Kuwait [GBK]</td>
+                                <td>KW14DEV0000004183020150724</td>
+                                <td>2021-03-05 16:15:34</td>
+                                <td>2537.330</td>
+                                <td>On processing</td>
+                                <td><img class="img-thumbnail-progress" src="/images/1.png"></td>
+                                <td> <input class="genid" value="1213985" type="checkbox" disabled="disabled"></td>
+                                <td>
+        <!--                            <a th:if="${record.status eq 0 and record.inFTFFile eq 0}"
+                                       class="btn  btn-xs btnbspr btn-danger space-btn
+                                       btn_withdrawalrequest_reject" 
+                                       th:data-url="${'./rejectwithdrawalrequest'}"
+                                       th:data-id="${record.withdrawalId}"
+                                       th:data-code="${record.merchantCode}"
+                                       >
+                                        
+                                        <span class="fa-solid fa-remove "></span>
+                                        <span th:utext='#{text.reject}'></span></a>-->
+                                    
+                                    
+                                     <span>Already in FTF</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>First331121 mid82847 last415242</td>
+                                <td>
+                                <a href="./merchantcashbook?id=258473" target="_blanck">258473</a>
+                                </td>
+                                <td>Boubyan Bank [Boubyan]</td>
+                                <td>KW14DEV0000004263920150724</td>
+                                <td>2021-03-05 16:15:34</td>
+                                <td>936.200</td>
+                                <td>On processing</td>
+                                <td><img class="img-thumbnail-progress" src="/images/1.png"></td>
+                                <td> <input class="genid" value="1213977" type="checkbox" disabled="disabled"></td>
+                                <td>
+        <!--                            <a th:if="${record.status eq 0 and record.inFTFFile eq 0}"
+                                       class="btn  btn-xs btnbspr btn-danger space-btn
+                                       btn_withdrawalrequest_reject" 
+                                       th:data-url="${'./rejectwithdrawalrequest'}"
+                                       th:data-id="${record.withdrawalId}"
+                                       th:data-code="${record.merchantCode}"
+                                       >
+                                        
+                                        <span class="fa-solid fa-remove "></span>
+                                        <span th:utext='#{text.reject}'></span></a>-->
+                                    
+                                    
+                                     <span>Already in FTF</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>First161066 mid683398 last833319</td>
+                                <td>
+                                <a href="./merchantcashbook?id=248458" target="_blanck">248458</a>
+                                </td>
+                                <td>Ahli United Bank [AUB]</td>
+                                <td>KW14DEV0000004083020150724</td>
+                                <td>2021-03-05 16:15:33</td>
+                                <td>501.650</td>
+                                <td>On processing</td>
+                                <td><img class="img-thumbnail-progress" src="/images/4.png"></td>
+                                <td> <input class="genid" value="1213969" type="checkbox" disabled="disabled"></td>
+                                <td>
+        <!--                            <a th:if="${record.status eq 0 and record.inFTFFile eq 0}"
+                                       class="btn  btn-xs btnbspr btn-danger space-btn
+                                       btn_withdrawalrequest_reject" 
+                                       th:data-url="${'./rejectwithdrawalrequest'}"
+                                       th:data-id="${record.withdrawalId}"
+                                       th:data-code="${record.merchantCode}"
+                                       >
+                                        
+                                        <span class="fa-solid fa-remove "></span>
+                                        <span th:utext='#{text.reject}'></span></a>-->
+                                    
+                                    
+                                     <span>Already in FTF</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>First780973 mid72472 last883078</td>
+                                <td>
+                                <a href="./merchantcashbook?id=251067" target="_blanck">251067</a>
+                                </td>
+                                <td>Gulf Bank of Kuwait [GBK]</td>
+                                <td>KW14DEV0000004131620150724</td>
+                                <td>2021-03-05 16:15:33</td>
+                                <td>200.400</td>
+                                <td>On processing</td>
+                                <td><img class="img-thumbnail-progress" src="/images/4.png"></td>
+                                <td> <input class="genid" value="1213952" type="checkbox" disabled="disabled"></td>
+                                <td>
+        <!--                            <a th:if="${record.status eq 0 and record.inFTFFile eq 0}"
+                                       class="btn  btn-xs btnbspr btn-danger space-btn
+                                       btn_withdrawalrequest_reject" 
+                                       th:data-url="${'./rejectwithdrawalrequest'}"
+                                       th:data-id="${record.withdrawalId}"
+                                       th:data-code="${record.merchantCode}"
+                                       >
+                                        
+                                        <span class="fa-solid fa-remove "></span>
+                                        <span th:utext='#{text.reject}'></span></a>-->
+                                    
+                                    
+                                     <span>Already in FTF</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>First174870 mid525542 last610030</td>
+                                <td>
+                                <a href="./merchantcashbook?id=223281" target="_blanck">223281</a>
+                                </td>
+                                <td>Kuwait Finance House [KFH]</td>
+                                <td>KW14DEV0000003577920150724</td>
+                                <td>2021-03-05 16:09:15</td>
+                                <td>1.000</td>
+                                <td>On processing</td>
+                                <td><img class="img-thumbnail-progress" src="/images/1.png"></td>
+                                <td> <input class="genid" value="1213191" type="checkbox" disabled="disabled"></td>
+                                <td>
+        <!--                            <a th:if="${record.status eq 0 and record.inFTFFile eq 0}"
+                                       class="btn  btn-xs btnbspr btn-danger space-btn
+                                       btn_withdrawalrequest_reject" 
+                                       th:data-url="${'./rejectwithdrawalrequest'}"
+                                       th:data-id="${record.withdrawalId}"
+                                       th:data-code="${record.merchantCode}"
+                                       >
+                                        
+                                        <span class="fa-solid fa-remove "></span>
+                                        <span th:utext='#{text.reject}'></span></a>-->
+                                    
+                                    
+                                     <span>Already in FTF</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>First523096 mid324240 last978706</td>
+                                <td>
+                                <a href="./merchantcashbook?id=223448" target="_blanck">223448</a>
+                                </td>
+                                <td>Kuwait Finance House [KFH]</td>
+                                <td>KW14DEV0000003581720150724</td>
+                                <td>2021-03-05 16:09:15</td>
+                                <td>0.300</td>
+                                <td>On processing</td>
+                                <td><img class="img-thumbnail-progress" src="/images/1.png"></td>
+                                <td> <input class="genid" value="1213198" type="checkbox" disabled="disabled"></td>
+                                <td>
+        <!--                            <a th:if="${record.status eq 0 and record.inFTFFile eq 0}"
+                                       class="btn  btn-xs btnbspr btn-danger space-btn
+                                       btn_withdrawalrequest_reject" 
+                                       th:data-url="${'./rejectwithdrawalrequest'}"
+                                       th:data-id="${record.withdrawalId}"
+                                       th:data-code="${record.merchantCode}"
+                                       >
+                                        
+                                        <span class="fa-solid fa-remove "></span>
+                                        <span th:utext='#{text.reject}'></span></a>-->
+                                    
+                                    
+                                     <span>Already in FTF</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>First415361 mid507238 last550664</td>
+                                <td>
+                                <a href="./merchantcashbook?id=222993" target="_blanck">222993</a>
+                                </td>
+                                <td>Boubyan Bank [Boubyan]</td>
+                                <td>KW14DEV0000003572220150724</td>
+                                <td>2021-03-05 16:09:15</td>
+                                <td>0.050</td>
+                                <td>On processing</td>
+                                <td><img class="img-thumbnail-progress" src="/images/1.png"></td>
+                                <td> <input class="genid" value="1213187" type="checkbox" disabled="disabled"></td>
+                                <td>
+        <!--                            <a th:if="${record.status eq 0 and record.inFTFFile eq 0}"
+                                       class="btn  btn-xs btnbspr btn-danger space-btn
+                                       btn_withdrawalrequest_reject" 
+                                       th:data-url="${'./rejectwithdrawalrequest'}"
+                                       th:data-id="${record.withdrawalId}"
+                                       th:data-code="${record.merchantCode}"
+                                       >
+                                        
+                                        <span class="fa-solid fa-remove "></span>
+                                        <span th:utext='#{text.reject}'></span></a>-->
+                                    
+                                    
+                                     <span>Already in FTF</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td>First898118 mid155243 last569919</td>
+                                <td>
+                                <a href="./merchantcashbook?id=223358" target="_blanck">223358</a>
+                                </td>
+                                <td>Boubyan Bank [Boubyan]</td>
+                                <td>KW14DEV0000003579520150724</td>
+                                <td>2021-03-05 16:09:15</td>
+                                <td>33.265</td>
+                                <td>On processing</td>
+                                <td><img class="img-thumbnail-progress" src="/images/4.png"></td>
+                                <td> <input class="genid" value="1213194" type="checkbox" disabled="disabled"></td>
+                                <td>
+        <!--                            <a th:if="${record.status eq 0 and record.inFTFFile eq 0}"
+                                       class="btn  btn-xs btnbspr btn-danger space-btn
+                                       btn_withdrawalrequest_reject" 
+                                       th:data-url="${'./rejectwithdrawalrequest'}"
+                                       th:data-id="${record.withdrawalId}"
+                                       th:data-code="${record.merchantCode}"
+                                       >
+                                        
+                                        <span class="fa-solid fa-remove "></span>
+                                        <span th:utext='#{text.reject}'></span></a>-->
+                                    
+                                    
+                                     <span>Already in FTF</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>17</td>
+                                <td>First283040 mid409988 last451821</td>
+                                <td>
+                                <a href="./merchantcashbook?id=222909" target="_blanck">222909</a>
+                                </td>
+                                <td>Boubyan Bank [Boubyan]</td>
+                                <td>KW14DEV0000003570520150724</td>
+                                <td>2021-03-05 16:09:15</td>
+                                <td>1663.950</td>
+                                <td>On processing</td>
+                                <td><img class="img-thumbnail-progress" src="/images/1.png"></td>
+                                <td> <input class="genid" value="1213183" type="checkbox" disabled="disabled"></td>
+                                <td>
+        <!--                            <a th:if="${record.status eq 0 and record.inFTFFile eq 0}"
+                                       class="btn  btn-xs btnbspr btn-danger space-btn
+                                       btn_withdrawalrequest_reject" 
+                                       th:data-url="${'./rejectwithdrawalrequest'}"
+                                       th:data-id="${record.withdrawalId}"
+                                       th:data-code="${record.merchantCode}"
+                                       >
+                                        
+                                        <span class="fa-solid fa-remove "></span>
+                                        <span th:utext='#{text.reject}'></span></a>-->
+                                    
+                                    
+                                     <span>Already in FTF</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>18</td>
+                                <td>First239757 mid852105 last514275</td>
+                                <td>
+                                <a href="./merchantcashbook?id=223228" target="_blanck">223228</a>
+                                </td>
+                                <td>Boubyan Bank [Boubyan]</td>
+                                <td>KW14DEV0000003576820150724</td>
+                                <td>2021-03-05 16:09:15</td>
+                                <td>8.150</td>
+                                <td>On processing</td>
+                                <td><img class="img-thumbnail-progress" src="/images/1.png"></td>
+                                <td> <input class="genid" value="1213190" type="checkbox" disabled="disabled"></td>
+                                <td>
+        <!--                            <a th:if="${record.status eq 0 and record.inFTFFile eq 0}"
+                                       class="btn  btn-xs btnbspr btn-danger space-btn
+                                       btn_withdrawalrequest_reject" 
+                                       th:data-url="${'./rejectwithdrawalrequest'}"
+                                       th:data-id="${record.withdrawalId}"
+                                       th:data-code="${record.merchantCode}"
+                                       >
+                                        
+                                        <span class="fa-solid fa-remove "></span>
+                                        <span th:utext='#{text.reject}'></span></a>-->
+                                    
+                                    
+                                     <span>Already in FTF</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>19</td>
+                                <td>First297542 mid519738 last82473</td>
+                                <td>
+                                <a href="./merchantcashbook?id=223441" target="_blanck">223441</a>
+                                </td>
+                                <td>Kuwait Finance House [KFH]</td>
+                                <td>KW14DEV0000003581520150724</td>
+                                <td>2021-03-05 16:09:15</td>
+                                <td>104.950</td>
+                                <td>On processing</td>
+                                <td><img class="img-thumbnail-progress" src="/images/1.png"></td>
+                                <td> <input class="genid" value="1213197" type="checkbox" disabled="disabled"></td>
+                                <td>
+        <!--                            <a th:if="${record.status eq 0 and record.inFTFFile eq 0}"
+                                       class="btn  btn-xs btnbspr btn-danger space-btn
+                                       btn_withdrawalrequest_reject" 
+                                       th:data-url="${'./rejectwithdrawalrequest'}"
+                                       th:data-id="${record.withdrawalId}"
+                                       th:data-code="${record.merchantCode}"
+                                       >
+                                        
+                                        <span class="fa-solid fa-remove "></span>
+                                        <span th:utext='#{text.reject}'></span></a>-->
+                                    
+                                    
+                                     <span>Already in FTF</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>20</td>
+                                <td>First870053 mid618235 last245679</td>
+                                <td>
+                                <a href="./merchantcashbook?id=222978" target="_blanck">222978</a>
+                                </td>
+                                <td>National Bank of Kuwait[NBK]</td>
+                                <td>KW14DEV0000003571820150724</td>
+                                <td>2021-03-05 16:09:15</td>
+                                <td>0.378</td>
+                                <td>On processing</td>
+                                <td><img class="img-thumbnail-progress" src="/images/1.png"></td>
+                                <td> <input class="genid" value="1213186" type="checkbox" disabled="disabled"></td>
+                                <td>
+        <!--                            <a th:if="${record.status eq 0 and record.inFTFFile eq 0}"
+                                       class="btn  btn-xs btnbspr btn-danger space-btn
+                                       btn_withdrawalrequest_reject" 
+                                       th:data-url="${'./rejectwithdrawalrequest'}"
+                                       th:data-id="${record.withdrawalId}"
+                                       th:data-code="${record.merchantCode}"
+                                       >
+                                        
+                                        <span class="fa-solid fa-remove "></span>
+                                        <span th:utext='#{text.reject}'></span></a>-->
+                                    
+                                    
+                                     <span>Already in FTF</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                         </table>
+                    </div>
+                    
+                    <!-- customers pagination -->
+                        <nav aria-label="Pagination">
+                            <ul class="pagination justify-content-center font-weight-medium">
+                                 <li class="page-item disabled">
+                                    <a class="page-link svg-icon" href="./pendingwithdrawals?page=1&amp;sort=requestDate,desc&amp;code=&amp;name=&amp;date=&amp;amount=&amp;bankname=&amp;accountnumber=&amp;selector=0" aria-label="Previous" title="Previous Page" rel="tooltip">
+                                        <span aria-hidden="true" data-feather="chevrons-left" width="20" height="20">First</span>
+                                    </a>
+                                </li>
+                                <li class="page-item disabled">
+                                    <a class="page-link svg-icon" href="./pendingwithdrawals?page=1&amp;sort=requestDate,desc&amp;code=&amp;name=&amp;date=&amp;amount=&amp;bankname=&amp;accountnumber=&amp;selector=0" aria-label="Previous" title="Previous Page" rel="tooltip">
+                                        <span aria-hidden="true" data-feather="chevrons-left" width="20" height="20">Prev</span>
+                                    </a>
+                                </li>
+                                
+                                <li class="page-item active">
+                                    <a class="page-link" href="./pendingwithdrawals?page=1&amp;sort=requestDate,desc&amp;code=&amp;name=&amp;date=&amp;amount=&amp;bankname=&amp;accountnumber=&amp;selector=0" title="Page 1" rel="tooltip">1</a>
+                                </li>
+                                
+                                <li class="page-item">
+                                    <a class="page-link" href="./pendingwithdrawals?page=2&amp;sort=requestDate,desc&amp;code=&amp;name=&amp;date=&amp;amount=&amp;bankname=&amp;accountnumber=&amp;selector=0" title="Page 2" rel="tooltip">2</a>
+                                </li>
+                                
+                                <li class="page-item">
+                                    <a class="page-link" href="./pendingwithdrawals?page=3&amp;sort=requestDate,desc&amp;code=&amp;name=&amp;date=&amp;amount=&amp;bankname=&amp;accountnumber=&amp;selector=0" title="Page 3" rel="tooltip">3</a>
+                                </li>
+                                
+                                <li class="page-item">
+                                    <a class="page-link" href="./pendingwithdrawals?page=4&amp;sort=requestDate,desc&amp;code=&amp;name=&amp;date=&amp;amount=&amp;bankname=&amp;accountnumber=&amp;selector=0" title="Page 4" rel="tooltip">4</a>
+                                </li>
+                                
+                                <li class="page-item">
+                                    <a class="page-link" href="./pendingwithdrawals?page=5&amp;sort=requestDate,desc&amp;code=&amp;name=&amp;date=&amp;amount=&amp;bankname=&amp;accountnumber=&amp;selector=0" title="Page 5" rel="tooltip">5</a>
+                                </li>
+                                
+                                <li class="page-item">
+                                    <a class="page-link" href="./pendingwithdrawals?page=6&amp;sort=requestDate,desc&amp;code=&amp;name=&amp;date=&amp;amount=&amp;bankname=&amp;accountnumber=&amp;selector=0" title="Page 6" rel="tooltip">6</a>
+                                </li>
+                                
+                                <li class="page-item">
+                                    <a class="page-link" href="./pendingwithdrawals?page=7&amp;sort=requestDate,desc&amp;code=&amp;name=&amp;date=&amp;amount=&amp;bankname=&amp;accountnumber=&amp;selector=0" title="Page 7" rel="tooltip">7</a>
+                                </li>
+                                
+                                <li class="page-item">
+                                    <a class="page-link" href="./pendingwithdrawals?page=8&amp;sort=requestDate,desc&amp;code=&amp;name=&amp;date=&amp;amount=&amp;bankname=&amp;accountnumber=&amp;selector=0" title="Page 8" rel="tooltip">8</a>
+                                </li>
+                                
+                                <li class="page-item">
+                                    <a class="page-link" href="./pendingwithdrawals?page=9&amp;sort=requestDate,desc&amp;code=&amp;name=&amp;date=&amp;amount=&amp;bankname=&amp;accountnumber=&amp;selector=0" title="Page 9" rel="tooltip">9</a>
+                                </li>
+                                
+                                <li class="page-item">
+                                    <a class="page-link" href="./pendingwithdrawals?page=10&amp;sort=requestDate,desc&amp;code=&amp;name=&amp;date=&amp;amount=&amp;bankname=&amp;accountnumber=&amp;selector=0" title="Page 10" rel="tooltip">10</a>
+                                </li>
+                                <li class="page-item disabled">
+                                    <a class="page-link svg-icon" href="#">
+                                        <span data-feather="more-horizontal" width="20" height="20">...</span>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link svg-icon" href="./pendingwithdrawals?page=2&amp;sort=requestDate,desc&amp;code=&amp;name=&amp;date=&amp;amount=&amp;bankname=&amp;accountnumber=&amp;selector=0" aria-label="Next" title="Next Page" rel="tooltip">
+                                        <span aria-hidden="true" data-feather="chevrons-right" width="20" height="20">Next</span>
+                                    </a>
+                                </li>
+                                 <li class="page-item">
+                                    <a class="page-link svg-icon" href="./pendingwithdrawals?page=216&amp;sort=requestDate,desc&amp;code=&amp;name=&amp;date=&amp;amount=&amp;bankname=&amp;accountnumber=&amp;selector=0" aria-label="Previous" title="Previous Page" rel="tooltip">
+                                        <span aria-hidden="true" data-feather="chevrons-left" width="20" height="20">Last</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+        <!--    grid view end-->
+                </div>
+            </div>
+          
+
+        </div>
+          </div>
+        </div>
+        </div>
+        </div>
+        
+        </div>
+
+
+
+
+      </div>
+      <!-- content-wrapper ends -->
+      <script>
+
+        var popUpObj;
+    
+        function showModalPopUp(){
+    
+          window.alert("Payle Mall is not currently available!!!!!!!")
+    
+    
+        }
+    
+      </script>
+      <!-- partial:partials/_footer.html -->
+      <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+          <span class="text-muted text-center text-sm-left d-block d-sm-inline-block"> Premium <a
+              href="https://home.payleq8.com/" target="_blank">PayLe Kuwait</a></span>
+          <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © .<a
+              href="https://home.payleq8.com/" target="_blank">Payle 2021</a> </span>
+        </div>
+      </footer>
+      <!-- partial -->
+    </div>
+    <!-- main-panel ends -->
+  </div>
+  <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="../../vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="../../../../vendors/chart.js/Chart.min.js"></script>
+  <script src="../../vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="../../vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="../../js/dataTables.select.min.js"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="../../js/off-canvas.js"></script>
+  <script src="../../js/hoverable-collapse.js"></script>
+  <script src="../../js/template.js"></script>
+  <script src="../../js/settings.js"></script>
+  <script src="../../js/todolist.js"></script>
+  <script src="../../package.json"></script>
+  <script src="../../js/Chart.roundedBarCharts.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="../../js/dashboard.js"></script>
+  <script src="../../js/Chart.roundedBarCharts.js"></script>
+  <!-- End custom js for this page-->
+  <script src="../../js/chart.js"></script>
+</body>
+
+</html>
