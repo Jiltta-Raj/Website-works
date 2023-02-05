@@ -1,0 +1,23 @@
+<div [@routerTransition] class="login-page">
+    <div class="row justify-content-md-center">
+        <div class="col-md-4">
+            <img class="user-avatar" src="assets/images/logo.png" width="150px" />
+            <h1>Merchants Register</h1>
+
+            <div style="border: 1px solid gray;
+            padding: 8px;">
+                <p>First you need to be registered with PayLe as a merchant. You can do that by downloading the PayLe mobile app for Android or IOS.
+                    Then you can login with the portal
+                </p>
+                <a href="https://play.google.com/store/apps/details?id=com.insharp.payle" target="”_blank”">
+                    <img class="appstore-btn" src="https://home.payleq8.com/wp-content/uploads/2020/11/google.png">
+                </a>
+                <a href="https://apps.apple.com/kw/app/payle/id994128742" target="”_blank”">
+                    <img class="appstore-btn" src="https://home.payleq8.com/wp-content/uploads/2020/11/Apple.png">
+                </a>
+            </div>
+            <br>
+            <a [routerLink]="['/login']" class="btn rounded-btn">{{ 'Log in' | translate }}</a>
+        </div>
+    </div>
+</div>
